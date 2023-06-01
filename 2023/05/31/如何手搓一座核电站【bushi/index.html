@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"c00k1s.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！   ⚛️从原子能搞起">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手搓电厂系列 | 到底如何建造一座核电站【bushi">
+<meta property="og:url" content="https://c00k1s.github.io/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/index.html">
+<meta property="og:site_name" content="酥师傅的摸鱼日常">
+<meta property="og:description" content="安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！   ⚛️从原子能搞起">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-31T06:16:05.000Z">
+<meta property="article:modified_time" content="2023-06-01T05:59:37.803Z">
+<meta property="article:author" content="可爱羊师傅的酥饼">
+<meta property="article:tag" content="核电">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://c00k1s.github.io/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://c00k1s.github.io/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/","path":"2023/05/31/如何手搓一座核电站【bushi/","title":"手搓电厂系列 | 到底如何建造一座核电站【bushi"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>手搓电厂系列 | 到底如何建造一座核电站【bushi | 酥师傅的摸鱼日常</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="酥师傅的摸鱼日常" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">酥师傅的摸鱼日常</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">摸鱼ing</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-主页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a></li><li class="menu-item menu-item-文章"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a></li><li class="menu-item menu-item-分类"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-关于"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%9B%EF%B8%8F%E4%BB%8E%E5%8E%9F%E5%AD%90%E8%83%BD%E6%90%9E%E8%B5%B7"><span class="nav-number">1.</span> <span class="nav-text">⚛️从原子能搞起</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E8%83%BD%E5%8F%91%E7%8E%B0%E7%9A%84%E8%B5%B7%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">原子能发现的起源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%BD%E9%87%8F%E7%9A%84%E9%87%8A%E6%94%BE%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">能量的释放过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E8%A3%82%E5%8F%98%E5%8F%8D%E5%BA%94"><span class="nav-number">1.2.1.</span> <span class="nav-text">链式裂变反应</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%98%95%E8%83%BD%E9%87%8F%E5%A6%82%E4%BD%95%E8%BD%AC%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">☕能量如何转化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E6%9C%B4%E8%80%8C%E6%88%90%E7%86%9F%E7%9A%84%E7%8E%A9%E6%B3%95%EF%BC%9A%E7%83%A7%E6%B0%B4%E4%B8%8E%E5%8F%91%E7%94%B5"><span class="nav-number">2.1.</span> <span class="nav-text">质朴而成熟的玩法：烧水与发电</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%8E%A9%E6%B3%95%EF%BC%9A%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%94%B5%E8%83%BD"><span class="nav-number">2.2.</span> <span class="nav-text">另一种玩法：直接转化为电能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98%EF%BC%9A%E6%A0%B8%E7%89%A9%E7%90%86%E8%AE%A1%E7%AE%97"><span class="nav-number">2.3.</span> <span class="nav-text">简单的数学题：核物理计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A5%E4%BD%A0%E5%8E%BB%E6%90%9E%E5%AE%9A%E7%87%83%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">🔥你去搞定燃料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%80%E7%9F%BF%E7%9A%84%E5%BC%80%E9%87%87%E3%80%81%E6%8F%90%E7%82%BC%E4%B8%8E%E6%B5%93%E7%BC%A9%E5%AF%8C%E9%9B%86"><span class="nav-number">3.1.</span> <span class="nav-text">铀矿的开采、提炼与浓缩富集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%87%83%E6%96%99%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.2.</span> <span class="nav-text">如何实现燃料循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E5%A3%B3%E7%AE%A1%E7%9A%84%E5%88%B6%E9%80%A0"><span class="nav-number">3.3.</span> <span class="nav-text">包壳管的制造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%BB%84%E8%A3%85%E4%B8%80%E4%B8%AA%E7%87%83%E6%96%99%E7%BB%84%E4%BB%B6"><span class="nav-number">3.4.</span> <span class="nav-text">简单组装一个燃料组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%AD%EF%B8%8F%E6%88%91%E6%9D%A5%E8%A7%A3%E5%86%B3%E8%AE%BE%E5%A4%87"><span class="nav-number">4.</span> <span class="nav-text">🏭️我来解决设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E6%90%93%E4%B8%80%E5%A5%97%E5%A0%86%E8%8A%AF"><span class="nav-number">4.1.</span> <span class="nav-text">手搓一套堆芯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E8%A3%85%E4%B8%80%E4%B8%AA%E6%8D%A2%E7%83%AD%E5%99%A8"><span class="nav-number">4.2.</span> <span class="nav-text">组装一个换热器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%B1%BD%E8%BD%AE%E6%9C%BA%E7%BB%93%E6%9E%84"><span class="nav-number">4.3.</span> <span class="nav-text">连上一个汽轮机结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E9%9A%8F%E4%BE%BF%E6%90%9E%E6%90%9E"><span class="nav-number">4.4.</span> <span class="nav-text">其他的随便搞搞</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%98%A2%EF%B8%8F%E9%82%A3%E4%B9%88%E8%B0%81%E5%8E%BB%E6%90%9E%E5%AE%9A%E6%A0%B8%E5%AE%89%E5%85%A8%E5%B1%80"><span class="nav-number">5.</span> <span class="nav-text">☢️那么谁去搞定核安全局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%AE%89%E5%85%A8%E6%96%87%E5%8C%96"><span class="nav-number">5.1.</span> <span class="nav-text">核安全文化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E7%94%B5%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7%E8%A6%81%E6%B1%82"><span class="nav-number">5.2.</span> <span class="nav-text">核电的可靠性要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%AE%89%E5%85%A8%E5%B1%80%E7%9A%84%E4%B8%80%E8%88%AC%E5%AE%A1%E6%89%B9%E6%B5%81%E7%A8%8B"><span class="nav-number">5.3.</span> <span class="nav-text">核安全局的一般审批流程</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="可爱羊师傅的酥饼"
+      src="/images/001.gif">
+  <p class="site-author-name" itemprop="name">可爱羊师傅的酥饼</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:suhaozhan@outlook.com" title="E-Mail → mailto:suhaozhan@outlook.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://c00k1s.github.io/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/001.gif">
+      <meta itemprop="name" content="可爱羊师傅的酥饼">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="酥师傅的摸鱼日常">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="手搓电厂系列 | 到底如何建造一座核电站【bushi | 酥师傅的摸鱼日常">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          手搓电厂系列 | 到底如何建造一座核电站【bushi
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-05-31 14:16:05" itemprop="dateCreated datePublished" datetime="2023-05-31T14:16:05+08:00">2023-05-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-01 13:59:37" itemprop="dateModified" datetime="2023-06-01T13:59:37+08:00">2023-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%89%8B%E6%90%93%E7%94%B5%E5%8E%82%E7%B3%BB%E5%88%97/" itemprop="url" rel="index"><span itemprop="name">手搓电厂系列</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<blockquote>
+<p>安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
+</blockquote>
+<hr>
+<h2 id="⚛️从原子能搞起"><a href="#⚛️从原子能搞起" class="headerlink" title="⚛️从原子能搞起"></a>⚛️从原子能搞起</h2><span id="more"></span>
+
+
+<h3 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h3><h3 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h3><h4 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h4><h2 id="☕能量如何转化"><a href="#☕能量如何转化" class="headerlink" title="☕能量如何转化"></a>☕能量如何转化</h2><p>原子能本质是热，热如何转化为电</p>
+<h3 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h3><p>原子能也可以直接转化为电，但是是另一种玩法</p>
+<h3 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h3><h3 id="简单的数学题：核物理计算"><a href="#简单的数学题：核物理计算" class="headerlink" title="简单的数学题：核物理计算"></a>简单的数学题：核物理计算</h3><h2 id="🔥你去搞定燃料"><a href="#🔥你去搞定燃料" class="headerlink" title="🔥你去搞定燃料"></a>🔥你去搞定燃料</h2><h3 id="铀矿的开采、提炼与浓缩富集"><a href="#铀矿的开采、提炼与浓缩富集" class="headerlink" title="铀矿的开采、提炼与浓缩富集"></a>铀矿的开采、提炼与浓缩富集</h3><h3 id="如何实现燃料循环"><a href="#如何实现燃料循环" class="headerlink" title="如何实现燃料循环"></a>如何实现燃料循环</h3><p>【fig】核燃料循环</p>
+<h3 id="包壳管的制造"><a href="#包壳管的制造" class="headerlink" title="包壳管的制造"></a>包壳管的制造</h3><h3 id="简单组装一个燃料组件"><a href="#简单组装一个燃料组件" class="headerlink" title="简单组装一个燃料组件"></a>简单组装一个燃料组件</h3><h2 id="🏭️我来解决设备"><a href="#🏭️我来解决设备" class="headerlink" title="🏭️我来解决设备"></a>🏭️我来解决设备</h2><h3 id="手搓一套堆芯"><a href="#手搓一套堆芯" class="headerlink" title="手搓一套堆芯"></a>手搓一套堆芯</h3><h3 id="组装一个换热器"><a href="#组装一个换热器" class="headerlink" title="组装一个换热器"></a>组装一个换热器</h3><h3 id="连上一个汽轮机结构"><a href="#连上一个汽轮机结构" class="headerlink" title="连上一个汽轮机结构"></a>连上一个汽轮机结构</h3><h3 id="其他的随便搞搞"><a href="#其他的随便搞搞" class="headerlink" title="其他的随便搞搞"></a>其他的<del>随便搞搞</del></h3><h2 id="☢️那么谁去搞定核安全局"><a href="#☢️那么谁去搞定核安全局" class="headerlink" title="☢️那么谁去搞定核安全局"></a>☢️那么谁去搞定核安全局</h2><h3 id="核安全文化"><a href="#核安全文化" class="headerlink" title="核安全文化"></a>核安全文化</h3><h3 id="核电的可靠性要求"><a href="#核电的可靠性要求" class="headerlink" title="核电的可靠性要求"></a>核电的可靠性要求</h3><h3 id="核安全局的一般审批流程"><a href="#核安全局的一般审批流程" class="headerlink" title="核安全局的一般审批流程"></a>核安全局的一般审批流程</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%A0%B8%E7%94%B5/" rel="tag"># 核电</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/31/%E6%8A%80%E5%B7%A7-%E6%8F%92%E5%80%BC%E5%A4%96%E6%8E%A8%E5%8F%8A%E6%8B%89%E4%BC%B8%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%9A%E5%BA%A6%E4%BF%AE%E6%AD%A3/" rel="prev" title="技巧-插值外推及拉伸数据的刚度修正">
+                  <i class="fa fa-chevron-left"></i> 技巧-插值外推及拉伸数据的刚度修正
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">可爱羊师傅的酥饼</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
