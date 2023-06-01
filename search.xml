@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Corrosion_in_NPP</title>
+    <url>/2023/05/29/Corrosion-in-NPP/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="核电厂运行基础"><a href="#核电厂运行基础" class="headerlink" title="核电厂运行基础"></a>核电厂运行基础</h1><p>普通压水堆的结构一般包含了两个高温水回路：一回路及二回路。两个回路的水皆为高温高压水。其中一回路水不沸腾，主要的作用是作为反应堆堆芯的冷却剂和慢化剂，将堆芯热量带出，并通过蒸汽发生器，将热量传给二回路，同时一回路中水还含有大量的硼酸作为反应堆慢化剂以控制堆芯反应性和功率水平。二回路的水为压力较低的可沸腾回路，主要功能是在蒸汽发生器中吸热气化，之后进入汽轮机厂房推动汽轮机发电，冷凝后再度进入蒸汽发生器吸热，进行下一个做工循环。</p>
+<p><img src="/2023/05/29/Corrosion-in-NPP/%E5%8E%8B%E6%B0%B4%E5%A0%86%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="压水堆示意图" title="压水堆示意图"></p>
+<span id="more"></span>
+
+
+<p>反应堆一般运行12-18个月后需要进行换料和检修，而大部分的结构设施需要在高温、高压、高辐照的环境下连续长时间运行，反应堆设计寿命一般可达40~60年。相对于常规的火电站，核电站水回路中的环境更为复杂，回路中的水化学条件以及部分质离子对核电厂设备的可靠性和安全性提出了更高的运行需求。</p>
+<p>相应的在各个回路中，其水化学的要求也不完全一致。这些水化学参数的设计一部分是出于对堆物理的设计的需求，另一方面则是为了降低堆内或回路内的金属材料的腐蚀。在一回路中需要加入适量的硼酸作为慢化剂，以控制反应堆功率。同时加入氢氧化锂实现堆pH的控制，降低金属材料的腐蚀速率。加入适量氢气以减弱堆芯中辐照水解产生的氧化性基团。对于腐蚀产物如Fe、Ni和Co等需要通过净化回路来降低主回路中的腐蚀产物浓度。其他的水中杂质还包括Cr-，SO42-，F-等。在二回路中，水的运行温度一般低于288℃，压力相对更低，使得其在蒸汽发生器中升温至气态。水化学参数的控制上则使用了NH3来进行pH调节，使用N2H4进行除氧。同样对于各类腐蚀产物和杂质离子，也有一定的控制要求。</p>
+<h1 id="核电厂中的材料"><a href="#核电厂中的材料" class="headerlink" title="核电厂中的材料"></a>核电厂中的材料</h1><p>就核电厂材料的腐蚀和失效而言，高温、高应力、腐蚀介质、加工和焊接缺陷等都是非常重要的影响因素。核电厂的材料腐蚀开裂主要由应力腐蚀开裂引起，这种开裂行为主要涉及到材料因素、环境因素以及载荷因素三个方面。因此我们的研究也主要从这三个方面着手，对材料的开裂规律和失效机理进行探索。</p>
+<p>下图是压水反应堆的典型结构和相应的关键部件的组成，反应堆压力容器（RPV）中有UO2燃料、锆合金包壳（Fuel Cladding）、堆内结构件、控制棒（Control Rod）、控制棒驱动器（CRDM），压力容器主要由508-III钢构成，主顾暗道则主要为304、316不锈钢。控制棒驱动器贯穿件则使用了600或690合金。再蒸汽发生器（SG）中，传热管普遍使用镍基合金，传热管抗震条和支撑板则使用405不锈钢……。整个回路中还有很多其他的关键部件，包括主泵结构、二回路以及冷却回路中的各种材料。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>手搓电厂系列 | 到底如何建造一座核电站【bushi</title>
+    <url>/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<blockquote>
+<p>安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
+</blockquote>
+<hr>
+<h2 id="⚛️从原子能搞起"><a href="#⚛️从原子能搞起" class="headerlink" title="⚛️从原子能搞起"></a>⚛️从原子能搞起</h2><span id="more"></span>
+
+
+<h3 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h3><h3 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h3><h4 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h4><h2 id="☕能量如何转化"><a href="#☕能量如何转化" class="headerlink" title="☕能量如何转化"></a>☕能量如何转化</h2><p>原子能本质是热，热如何转化为电</p>
+<h3 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h3><p>原子能也可以直接转化为电，但是是另一种玩法</p>
+<h3 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h3><h3 id="简单的数学题：核物理计算"><a href="#简单的数学题：核物理计算" class="headerlink" title="简单的数学题：核物理计算"></a>简单的数学题：核物理计算</h3><h2 id="🔥你去搞定燃料"><a href="#🔥你去搞定燃料" class="headerlink" title="🔥你去搞定燃料"></a>🔥你去搞定燃料</h2><h3 id="铀矿的开采、提炼与浓缩富集"><a href="#铀矿的开采、提炼与浓缩富集" class="headerlink" title="铀矿的开采、提炼与浓缩富集"></a>铀矿的开采、提炼与浓缩富集</h3><h3 id="如何实现燃料循环"><a href="#如何实现燃料循环" class="headerlink" title="如何实现燃料循环"></a>如何实现燃料循环</h3><p>【fig】核燃料循环</p>
+<h3 id="包壳管的制造"><a href="#包壳管的制造" class="headerlink" title="包壳管的制造"></a>包壳管的制造</h3><h3 id="简单组装一个燃料组件"><a href="#简单组装一个燃料组件" class="headerlink" title="简单组装一个燃料组件"></a>简单组装一个燃料组件</h3><h2 id="🏭️我来解决设备"><a href="#🏭️我来解决设备" class="headerlink" title="🏭️我来解决设备"></a>🏭️我来解决设备</h2><h3 id="手搓一套堆芯"><a href="#手搓一套堆芯" class="headerlink" title="手搓一套堆芯"></a>手搓一套堆芯</h3><h3 id="组装一个换热器"><a href="#组装一个换热器" class="headerlink" title="组装一个换热器"></a>组装一个换热器</h3><h3 id="连上一个汽轮机结构"><a href="#连上一个汽轮机结构" class="headerlink" title="连上一个汽轮机结构"></a>连上一个汽轮机结构</h3><h3 id="其他的随便搞搞"><a href="#其他的随便搞搞" class="headerlink" title="其他的随便搞搞"></a>其他的<del>随便搞搞</del></h3><h2 id="☢️那么谁去搞定核安全局"><a href="#☢️那么谁去搞定核安全局" class="headerlink" title="☢️那么谁去搞定核安全局"></a>☢️那么谁去搞定核安全局</h2><h3 id="核安全文化"><a href="#核安全文化" class="headerlink" title="核安全文化"></a>核安全文化</h3><h3 id="核电的可靠性要求"><a href="#核电的可靠性要求" class="headerlink" title="核电的可靠性要求"></a>核电的可靠性要求</h3><h3 id="核安全局的一般审批流程"><a href="#核安全局的一般审批流程" class="headerlink" title="核安全局的一般审批流程"></a>核安全局的一般审批流程</h3>]]></content>
+      <categories>
+        <category>手搓电厂系列</category>
+      </categories>
+      <tags>
+        <tag>核电</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/05/29/hello-world/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误 ≈w≈" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
@@ -22,20 +58,6 @@
         <tag>Mytest</tag>
         <tag>Game</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Corrosion_in_NPP</title>
-    <url>/2023/05/29/Corrosion-in-NPP/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="核电厂运行基础"><a href="#核电厂运行基础" class="headerlink" title="核电厂运行基础"></a>核电厂运行基础</h1><p>普通压水堆的结构一般包含了两个高温水回路：一回路及二回路。两个回路的水皆为高温高压水。其中一回路水不沸腾，主要的作用是作为反应堆堆芯的冷却剂和慢化剂，将堆芯热量带出，并通过蒸汽发生器，将热量传给二回路，同时一回路中水还含有大量的硼酸作为反应堆慢化剂以控制堆芯反应性和功率水平。二回路的水为压力较低的可沸腾回路，主要功能是在蒸汽发生器中吸热气化，之后进入汽轮机厂房推动汽轮机发电，冷凝后再度进入蒸汽发生器吸热，进行下一个做工循环。</p>
-<p><img src="/2023/05/29/Corrosion-in-NPP/%E5%8E%8B%E6%B0%B4%E5%A0%86%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="压水堆示意图" title="压水堆示意图"></p>
-<span id="more"></span>
-
-
-<p>反应堆一般运行12-18个月后需要进行换料和检修，而大部分的结构设施需要在高温、高压、高辐照的环境下连续长时间运行，反应堆设计寿命一般可达40~60年。相对于常规的火电站，核电站水回路中的环境更为复杂，回路中的水化学条件以及部分质离子对核电厂设备的可靠性和安全性提出了更高的运行需求。</p>
-<p>相应的在各个回路中，其水化学的要求也不完全一致。这些水化学参数的设计一部分是出于对堆物理的设计的需求，另一方面则是为了降低堆内或回路内的金属材料的腐蚀。在一回路中需要加入适量的硼酸作为慢化剂，以控制反应堆功率。同时加入氢氧化锂实现堆pH的控制，降低金属材料的腐蚀速率。加入适量氢气以减弱堆芯中辐照水解产生的氧化性基团。对于腐蚀产物如Fe、Ni和Co等需要通过净化回路来降低主回路中的腐蚀产物浓度。其他的水中杂质还包括Cr-，SO42-，F-等。在二回路中，水的运行温度一般低于288℃，压力相对更低，使得其在蒸汽发生器中升温至气态。水化学参数的控制上则使用了NH3来进行pH调节，使用N2H4进行除氧。同样对于各类腐蚀产物和杂质离子，也有一定的控制要求。</p>
-<h1 id="核电厂中的材料"><a href="#核电厂中的材料" class="headerlink" title="核电厂中的材料"></a>核电厂中的材料</h1><p>就核电厂材料的腐蚀和失效而言，高温、高应力、腐蚀介质、加工和焊接缺陷等都是非常重要的影响因素。核电厂的材料腐蚀开裂主要由应力腐蚀开裂引起，这种开裂行为主要涉及到材料因素、环境因素以及载荷因素三个方面。因此我们的研究也主要从这三个方面着手，对材料的开裂规律和失效机理进行探索。</p>
-<p>下图是压水反应堆的典型结构和相应的关键部件的组成，反应堆压力容器（RPV）中有UO2燃料、锆合金包壳（Fuel Cladding）、堆内结构件、控制棒（Control Rod）、控制棒驱动器（CRDM），压力容器主要由508-III钢构成，主顾暗道则主要为304、316不锈钢。控制棒驱动器贯穿件则使用了600或690合金。再蒸汽发生器（SG）中，传热管普遍使用镍基合金，传热管抗震条和支撑板则使用405不锈钢……。整个回路中还有很多其他的关键部件，包括主泵结构、二回路以及冷却回路中的各种材料。</p>
-]]></content>
   </entry>
   <entry>
     <title>技巧-插值外推及拉伸数据的刚度修正</title>
@@ -96,28 +118,6 @@
       <tags>
         <tag>说明书</tag>
         <tag>PLC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手搓电厂系列 | 到底如何建造一座核电站【bushi</title>
-    <url>/2023/05/31/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E5%BA%A7%E6%A0%B8%E7%94%B5%E7%AB%99%E3%80%90bushi/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<blockquote>
-<p>安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
-</blockquote>
-<hr>
-<h2 id="⚛️从原子能搞起"><a href="#⚛️从原子能搞起" class="headerlink" title="⚛️从原子能搞起"></a>⚛️从原子能搞起</h2><span id="more"></span>
-
-
-<h3 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h3><h3 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h3><h4 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h4><h2 id="☕能量如何转化"><a href="#☕能量如何转化" class="headerlink" title="☕能量如何转化"></a>☕能量如何转化</h2><p>原子能本质是热，热如何转化为电</p>
-<h3 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h3><p>原子能也可以直接转化为电，但是是另一种玩法</p>
-<h3 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h3><h3 id="简单的数学题：核物理计算"><a href="#简单的数学题：核物理计算" class="headerlink" title="简单的数学题：核物理计算"></a>简单的数学题：核物理计算</h3><h2 id="🔥你去搞定燃料"><a href="#🔥你去搞定燃料" class="headerlink" title="🔥你去搞定燃料"></a>🔥你去搞定燃料</h2><h3 id="铀矿的开采、提炼与浓缩富集"><a href="#铀矿的开采、提炼与浓缩富集" class="headerlink" title="铀矿的开采、提炼与浓缩富集"></a>铀矿的开采、提炼与浓缩富集</h3><h3 id="如何实现燃料循环"><a href="#如何实现燃料循环" class="headerlink" title="如何实现燃料循环"></a>如何实现燃料循环</h3><p>【fig】核燃料循环</p>
-<h3 id="包壳管的制造"><a href="#包壳管的制造" class="headerlink" title="包壳管的制造"></a>包壳管的制造</h3><h3 id="简单组装一个燃料组件"><a href="#简单组装一个燃料组件" class="headerlink" title="简单组装一个燃料组件"></a>简单组装一个燃料组件</h3><h2 id="🏭️我来解决设备"><a href="#🏭️我来解决设备" class="headerlink" title="🏭️我来解决设备"></a>🏭️我来解决设备</h2><h3 id="手搓一套堆芯"><a href="#手搓一套堆芯" class="headerlink" title="手搓一套堆芯"></a>手搓一套堆芯</h3><h3 id="组装一个换热器"><a href="#组装一个换热器" class="headerlink" title="组装一个换热器"></a>组装一个换热器</h3><h3 id="连上一个汽轮机结构"><a href="#连上一个汽轮机结构" class="headerlink" title="连上一个汽轮机结构"></a>连上一个汽轮机结构</h3><h3 id="其他的随便搞搞"><a href="#其他的随便搞搞" class="headerlink" title="其他的随便搞搞"></a>其他的<del>随便搞搞</del></h3><h2 id="☢️那么谁去搞定核安全局"><a href="#☢️那么谁去搞定核安全局" class="headerlink" title="☢️那么谁去搞定核安全局"></a>☢️那么谁去搞定核安全局</h2><h3 id="核安全文化"><a href="#核安全文化" class="headerlink" title="核安全文化"></a>核安全文化</h3><h3 id="核电的可靠性要求"><a href="#核电的可靠性要求" class="headerlink" title="核电的可靠性要求"></a>核电的可靠性要求</h3><h3 id="核安全局的一般审批流程"><a href="#核安全局的一般审批流程" class="headerlink" title="核安全局的一般审批流程"></a>核安全局的一般审批流程</h3>]]></content>
-      <categories>
-        <category>手搓电厂系列</category>
-      </categories>
-      <tags>
-        <tag>核电</tag>
       </tags>
   </entry>
 </search>
