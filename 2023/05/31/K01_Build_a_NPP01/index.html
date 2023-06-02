@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/mylogo.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/mylogo.png">
@@ -18,17 +17,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"c00k1s.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"c00k1s.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！">
+    <meta name="description" content="免责声明：页面仅提供一些简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手把手教学 | 如何建造一座核电站">
 <meta property="og:url" content="https://c00k1s.github.io/2023/05/31/K01_Build_a_NPP01/index.html">
 <meta property="og:site_name" content="酥师傅的摸鱼日常">
-<meta property="og:description" content="安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！">
+<meta property="og:description" content="免责声明：页面仅提供一些简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-31T06:16:05.000Z">
-<meta property="article:modified_time" content="2023-06-01T07:41:18.548Z">
+<meta property="article:modified_time" content="2023-06-01T08:52:00.198Z">
 <meta property="article:author" content="可爱羊师傅的酥饼">
 <meta property="article:tag" content="核电">
 <meta property="article:tag" content="科普">
@@ -58,8 +57,120 @@
   </noscript>
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="酥师傅的摸鱼日常" type="application/atom+xml">
-</head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="酥师傅的摸鱼日常" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -146,7 +257,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%9B%EF%B8%8F%E5%8E%9F%E5%AD%90%E8%83%BD%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">⚛️原子能基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E8%83%BD%E5%8F%91%E7%8E%B0%E7%9A%84%E8%B5%B7%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">原子能发现的起源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%BD%E9%87%8F%E7%9A%84%E9%87%8A%E6%94%BE%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">能量的释放过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E8%A3%82%E5%8F%98%E5%8F%8D%E5%BA%94"><span class="nav-number">1.2.1.</span> <span class="nav-text">链式裂变反应</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%98%95%E7%83%A7%E6%B0%B4%E6%B3%A1%E8%8C%B6%EF%BC%8C%E5%81%9A%E5%8A%9F%E5%8F%91%E7%94%B5"><span class="nav-number">2.</span> <span class="nav-text">☕烧水泡茶，做功发电</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A8%E6%9C%B4%E8%80%8C%E6%88%90%E7%86%9F%E7%9A%84%E7%8E%A9%E6%B3%95%EF%BC%9A%E7%83%A7%E6%B0%B4%E4%B8%8E%E5%8F%91%E7%94%B5"><span class="nav-number">2.1.</span> <span class="nav-text">质朴而成熟的玩法：烧水与发电</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%8E%A9%E6%B3%95%EF%BC%9A%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%94%B5%E8%83%BD"><span class="nav-number">2.2.</span> <span class="nav-text">另一种玩法：直接转化为电能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98%EF%BC%9A%E6%A0%B8%E7%89%A9%E7%90%86%E8%AE%A1%E7%AE%97"><span class="nav-number">2.3.</span> <span class="nav-text">简单的数学题：核物理计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A5%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text">🔥简单的数学计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E7%89%A9%E7%90%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">3.1.</span> <span class="nav-text">核物理的计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E7%94%B5%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">3.2.</span> <span class="nav-text">发电的计算</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%9B%EF%B8%8F%E5%8E%9F%E5%AD%90%E8%83%BD%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">⚛️原子能基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90%E8%83%BD%E5%8F%91%E7%8E%B0%E7%9A%84%E8%B5%B7%E6%BA%90"><span class="nav-number">1.0.1.</span> <span class="nav-text">原子能发现的起源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%83%BD%E9%87%8F%E7%9A%84%E9%87%8A%E6%94%BE%E8%BF%87%E7%A8%8B"><span class="nav-number">1.0.2.</span> <span class="nav-text">能量的释放过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E8%A3%82%E5%8F%98%E5%8F%8D%E5%BA%94"><span class="nav-number">1.0.3.</span> <span class="nav-text">链式裂变反应</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%98%95%E7%83%A7%E6%B0%B4%E6%B3%A1%E8%8C%B6%EF%BC%8C%E5%81%9A%E5%8A%9F%E5%8F%91%E7%94%B5"><span class="nav-number">2.</span> <span class="nav-text">☕烧水泡茶，做功发电</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%A8%E6%9C%B4%E8%80%8C%E6%88%90%E7%86%9F%E7%9A%84%E7%8E%A9%E6%B3%95%EF%BC%9A%E7%83%A7%E6%B0%B4%E4%B8%8E%E5%8F%91%E7%94%B5"><span class="nav-number">2.0.1.</span> <span class="nav-text">质朴而成熟的玩法：烧水与发电</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E7%A7%8D%E7%8E%A9%E6%B3%95%EF%BC%9A%E7%9B%B4%E6%8E%A5%E8%BD%AC%E5%8C%96%E4%B8%BA%E7%94%B5%E8%83%BD"><span class="nav-number">2.0.2.</span> <span class="nav-text">另一种玩法：直接转化为电能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A5%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text">🔥简单的数学计算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B8%E7%89%A9%E7%90%86%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">3.0.1.</span> <span class="nav-text">核物理的计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E7%83%AD%E6%80%A7%E8%83%BD%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">3.0.2.</span> <span class="nav-text">传热性能的计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E7%94%B5%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">3.0.3.</span> <span class="nav-text">发电的计算</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -161,13 +272,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -187,6 +298,9 @@
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
       </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc.svg" alt="Creative Commons"></a>
   </div>
 
         </div>
@@ -246,7 +360,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-01 15:41:18" itemprop="dateModified" datetime="2023-06-01T15:41:18+08:00">2023-06-01</time>
+      <time title="修改时间：2023-06-01 16:52:00" itemprop="dateModified" datetime="2023-06-01T16:52:00+08:00">2023-06-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -269,17 +383,18 @@
     
     <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
 <blockquote>
-<p>安全声明：页面仅提供简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
+<p>免责声明：页面仅提供一些简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
 </blockquote>
 <hr>
 <span id="more"></span>
 
-<h2 id="⚛️原子能基础"><a href="#⚛️原子能基础" class="headerlink" title="⚛️原子能基础"></a>⚛️原子能基础</h2><h3 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h3><h3 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h3><h4 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h4><h2 id="☕烧水泡茶，做功发电"><a href="#☕烧水泡茶，做功发电" class="headerlink" title="☕烧水泡茶，做功发电"></a>☕<del>烧水泡茶</del>，做功发电</h2><p>原子能本质是热，热如何转化为电</p>
-<h3 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h3><p>原子能也可以直接转化为电，但是是另一种玩法</p>
-<h3 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h3><h3 id="简单的数学题：核物理计算"><a href="#简单的数学题：核物理计算" class="headerlink" title="简单的数学题：核物理计算"></a>简单的数学题：核物理计算</h3><h2 id="🔥简单的数学计算"><a href="#🔥简单的数学计算" class="headerlink" title="🔥简单的数学计算"></a>🔥简单的数学计算</h2><h3 id="核物理的计算"><a href="#核物理的计算" class="headerlink" title="核物理的计算"></a>核物理的计算</h3><h3 id="发电的计算"><a href="#发电的计算" class="headerlink" title="发电的计算"></a>发电的计算</h3><p>测试<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="第一个角标的参考文献信息
+<h2 id="⚛️原子能基础"><a href="#⚛️原子能基础" class="headerlink" title="⚛️原子能基础"></a>⚛️原子能基础</h2><h4 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h4><h4 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h4><h4 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h4><h2 id="☕烧水泡茶，做功发电"><a href="#☕烧水泡茶，做功发电" class="headerlink" title="☕烧水泡茶，做功发电"></a>☕<del>烧水泡茶</del>，做功发电</h2><p>原子能本质是热，热如何转化为电</p>
+<h4 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h4><p>原子能也可以直接转化为电，但是是另一种玩法</p>
+<h4 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h4><h2 id="🔥简单的数学计算"><a href="#🔥简单的数学计算" class="headerlink" title="🔥简单的数学计算"></a>🔥简单的数学计算</h2><h4 id="核物理的计算"><a href="#核物理的计算" class="headerlink" title="核物理的计算"></a>核物理的计算</h4><p>反应堆启动的过程中的重要一步就是达到临界。</p>
+<h4 id="传热性能的计算"><a href="#传热性能的计算" class="headerlink" title="传热性能的计算"></a>传热性能的计算</h4><h4 id="发电的计算"><a href="#发电的计算" class="headerlink" title="发电的计算"></a>发电的计算</h4><p>测试<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="第一个角标的参考文献信息
 ">[1]</span></a></sup></p>
-<hr>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">第一个角标的参考文献信息<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="14.517ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 6416.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(394,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(672,0)"></path></g><g data-mml-node="mo" transform="translate(1228,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mo" transform="translate(1228,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1617,0)"><path data-c="63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(444,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(944,0)"></path></g><g data-mml-node="mo" transform="translate(2955,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mo" transform="translate(2955,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(3344,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(4138.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(5138.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(5638.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(6027.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">第一个角标的参考文献信息<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
     </div>
 
     
@@ -391,6 +506,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/2023/05/31/K01_Build_a_NPP01/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌒',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 
 </body>
 </html>
