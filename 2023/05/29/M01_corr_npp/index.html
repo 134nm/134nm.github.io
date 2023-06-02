@@ -480,6 +480,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/2023/05/29/M01_corr_npp/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
+
+
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"BnEYsXBxsqsDTGxhVJ9gZ0pe-gzGzoHsz","appKey":"X0HtaxhZeYGQ2hXWO5w2IDR6","serverURLs":"https://bneysxbx.api.lncldglobal.com","placeholder":"Just go go","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":["nick"],"notify":false,"varify":false,"el":"#valine-comments","path":"/2023/05/29/M01_corr_npp/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      'https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -499,21 +514,6 @@ var options = {
 const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
-</script>
-
-
-<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"BnEYsXBxsqsDTGxhVJ9gZ0pe-gzGzoHsz","appKey":"X0HtaxhZeYGQ2hXWO5w2IDR6","serverURLs":"https://bneysxbx.api.lncldglobal.com","placeholder":"Just go go","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":["nick"],"notify":false,"varify":false,"el":"#valine-comments","path":"/2023/05/29/M01_corr_npp/"}</script>
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.valine.el)
-    .then(() => NexT.utils.getScript(
-      'https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
-      { condition: window.Valine }
-    ))
-    .then(() => {
-      new Valine(CONFIG.valine);
-    });
-});
 </script>
 
 </body>

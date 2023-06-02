@@ -205,6 +205,57 @@
       </tags>
   </entry>
   <entry>
+    <title>测试技巧 | 插值外推及拉伸数据的刚度修正</title>
+    <url>/2023/05/31/S01_Origin_Interpolation/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
+<p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
+</blockquote>
+<blockquote>
+<p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
+</blockquote>
+<h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
+<p>注意夹具的种类不要更换，否则测量的误差更大（其实这个方法本身的误差也很大，仅具有有限的参考作用，切勿当作高精度测量的方法使用）。</p>
+<p>对数据点的处理应当是：测量位移 减去 相同载荷测得的刚度曲线位移。</p>
+<p>因此我们需要对刚度曲线进行差值，在相同载荷处差值。</p>
+<h2 id="处理数据的操作"><a href="#处理数据的操作" class="headerlink" title="处理数据的操作"></a>处理数据的操作</h2><ul>
+<li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
+<li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
+<li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
+<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。</li>
+</ul>
+<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505760105.png" alt="1685505760105" title="差值-外推操作"><em>插值-外推</em></p>
+<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505851848.png" alt="1685505851848"><em>设定参数</em></p>
+<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="/2023/05/31/S01_Origin_Interpolation/1685505907202.png" alt="1685505907202"><em>对实验数据结果进行处理</em></p>
+<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505978258.png" alt="1685505978258"><em>修正前后的曲线</em></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>材料分析</category>
+      </categories>
+      <tags>
+        <tag>数据处理</tag>
+        <tag>OriginLab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TEST</title>
+    <url>/2023/06/02/TEST/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+
+<div class="markmap-container" style="height:800px">
+  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;思维导图&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;主题&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;此标题1&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;<a href=\&quot;https://www.sjtu.edu.cn\&quot;>网页</a>&quot;}]}]}"></svg>
+</div>
+
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>科普</category>
+      </categories>
+  </entry>
+  <entry>
     <title>测试技巧 | 金属氧化膜的镀镍保护</title>
     <url>/2023/06/01/S02_Ni_platting/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -257,43 +308,6 @@
       </tags>
   </entry>
   <entry>
-    <title>测试技巧 | 插值外推及拉伸数据的刚度修正</title>
-    <url>/2023/05/31/S01_Origin_Interpolation/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
-<p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
-<span id="more"></span>
-
-<blockquote>
-<p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
-</blockquote>
-<blockquote>
-<p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
-</blockquote>
-<h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
-<p>注意夹具的种类不要更换，否则测量的误差更大（其实这个方法本身的误差也很大，仅具有有限的参考作用，切勿当作高精度测量的方法使用）。</p>
-<p>对数据点的处理应当是：测量位移 减去 相同载荷测得的刚度曲线位移。</p>
-<p>因此我们需要对刚度曲线进行差值，在相同载荷处差值。</p>
-<h2 id="处理数据的操作"><a href="#处理数据的操作" class="headerlink" title="处理数据的操作"></a>处理数据的操作</h2><ul>
-<li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
-<li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
-<li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
-<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。</li>
-</ul>
-<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505760105.png" alt="1685505760105" title="差值-外推操作"><em>插值-外推</em></p>
-<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505851848.png" alt="1685505851848"><em>设定参数</em></p>
-<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="/2023/05/31/S01_Origin_Interpolation/1685505907202.png" alt="1685505907202"><em>对实验数据结果进行处理</em></p>
-<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505978258.png" alt="1685505978258"><em>修正前后的曲线</em></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>材料分析</category>
-      </categories>
-      <tags>
-        <tag>数据处理</tag>
-        <tag>OriginLab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/05/29/hello-world/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误 ≈w≈" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
@@ -308,19 +322,5 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>TEST</title>
-    <url>/2023/06/02/TEST/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-
-<div class="markmap-container" style="height:800px">
-  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;思维导图&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;主题&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;此标题1&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;<a href=\&quot;https://www.sjtu.edu.cn\&quot;>网页</a>&quot;}]}]}"></svg>
-</div>
-
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>科普</category>
-      </categories>
   </entry>
 </search>
