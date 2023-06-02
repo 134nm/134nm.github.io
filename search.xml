@@ -24,6 +24,32 @@
       </tags>
   </entry>
   <entry>
+    <title>手把手教学 | 如何建造一座核电站</title>
+    <url>/2023/06/02/K01_Build_a_NPP01/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<blockquote>
+<p>免责声明：页面仅提供一些简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
+</blockquote>
+<hr>
+<span id="more"></span>
+
+<h2 id="⚛️原子能基础"><a href="#⚛️原子能基础" class="headerlink" title="⚛️原子能基础"></a>⚛️原子能基础</h2><h3 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h3><h3 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h3><h3 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h3><h2 id="☕烧水泡茶，做功发电"><a href="#☕烧水泡茶，做功发电" class="headerlink" title="☕烧水泡茶，做功发电"></a>☕<del>烧水泡茶</del>，做功发电</h2><p>原子能本质是热，热如何转化为电</p>
+<h3 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h3><p>原子能也可以直接转化为电，但是是另一种玩法</p>
+<h3 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h3><h2 id="🔥简单的数学计算"><a href="#🔥简单的数学计算" class="headerlink" title="🔥简单的数学计算"></a>🔥简单的数学计算</h2><h3 id="核物理的计算"><a href="#核物理的计算" class="headerlink" title="核物理的计算"></a>核物理的计算</h3><p>反应堆启动的过程中的重要一步就是达到临界。</p>
+<h3 id="传热性能的计算"><a href="#传热性能的计算" class="headerlink" title="传热性能的计算"></a>传热性能的计算</h3><h3 id="发电的计算"><a href="#发电的计算" class="headerlink" title="发电的计算"></a>发电的计算</h3><p>测试<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="第一个角标的参考文献信息
+">[1]</span></a></sup></p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="14.517ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 6416.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(394,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(672,0)"></path></g><g data-mml-node="mo" transform="translate(1228,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mo" transform="translate(1228,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1617,0)"><path data-c="63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(444,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(944,0)"></path></g><g data-mml-node="mo" transform="translate(2955,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mo" transform="translate(2955,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(3344,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(4138.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(5138.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(5638.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(6027.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">第一个角标的参考文献信息<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>教学科普系列</category>
+      </categories>
+      <tags>
+        <tag>核电</tag>
+        <tag>科普</tag>
+        <tag>原子能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>酥师傅的毕业寄</title>
     <url>/2023/06/01/D01_myPhD/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
@@ -129,32 +155,6 @@
       </categories>
   </entry>
   <entry>
-    <title>手把手教学 | 如何建造一座核电站</title>
-    <url>/2023/06/02/K01_Build_a_NPP01/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<blockquote>
-<p>免责声明：页面仅提供一些简单的解题思路，非专业人士请勿在监管范围外进行实质性操作！</p>
-</blockquote>
-<hr>
-<span id="more"></span>
-
-<h2 id="⚛️原子能基础"><a href="#⚛️原子能基础" class="headerlink" title="⚛️原子能基础"></a>⚛️原子能基础</h2><h3 id="原子能发现的起源"><a href="#原子能发现的起源" class="headerlink" title="原子能发现的起源"></a>原子能发现的起源</h3><h3 id="能量的释放过程"><a href="#能量的释放过程" class="headerlink" title="能量的释放过程"></a>能量的释放过程</h3><h3 id="链式裂变反应"><a href="#链式裂变反应" class="headerlink" title="链式裂变反应"></a>链式裂变反应</h3><h2 id="☕烧水泡茶，做功发电"><a href="#☕烧水泡茶，做功发电" class="headerlink" title="☕烧水泡茶，做功发电"></a>☕<del>烧水泡茶</del>，做功发电</h2><p>原子能本质是热，热如何转化为电</p>
-<h3 id="质朴而成熟的玩法：烧水与发电"><a href="#质朴而成熟的玩法：烧水与发电" class="headerlink" title="质朴而成熟的玩法：烧水与发电"></a>质朴而成熟的玩法：烧水与发电</h3><p>原子能也可以直接转化为电，但是是另一种玩法</p>
-<h3 id="另一种玩法：直接转化为电能"><a href="#另一种玩法：直接转化为电能" class="headerlink" title="另一种玩法：直接转化为电能"></a>另一种玩法：直接转化为电能</h3><h2 id="🔥简单的数学计算"><a href="#🔥简单的数学计算" class="headerlink" title="🔥简单的数学计算"></a>🔥简单的数学计算</h2><h3 id="核物理的计算"><a href="#核物理的计算" class="headerlink" title="核物理的计算"></a>核物理的计算</h3><p>反应堆启动的过程中的重要一步就是达到临界。</p>
-<h3 id="传热性能的计算"><a href="#传热性能的计算" class="headerlink" title="传热性能的计算"></a>传热性能的计算</h3><h3 id="发电的计算"><a href="#发电的计算" class="headerlink" title="发电的计算"></a>发电的计算</h3><p>测试<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="第一个角标的参考文献信息
-">[1]</span></a></sup></p>
-<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="14.517ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 6416.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(394,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(672,0)"></path></g><g data-mml-node="mo" transform="translate(1228,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mo" transform="translate(1228,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1617,0)"><path data-c="63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(444,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(944,0)"></path></g><g data-mml-node="mo" transform="translate(2955,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mo" transform="translate(2955,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(3344,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(4138.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(5138.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(5638.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(6027.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">第一个角标的参考文献信息<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>教学科普系列</category>
-      </categories>
-      <tags>
-        <tag>核电</tag>
-        <tag>科普</tag>
-        <tag>原子能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>核电厂中的材料腐蚀行为</title>
     <url>/2023/05/29/M01_corr_npp/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="核电厂运行基础"><a href="#核电厂运行基础" class="headerlink" title="核电厂运行基础"></a>核电厂运行基础</h2><p>普通压水堆的结构一般包含了两个高温水回路：一回路及二回路。两个回路的水皆为高温高压水。其中一回路水不沸腾，主要的作用是作为反应堆堆芯的冷却剂和慢化剂，将堆芯热量带出，并通过蒸汽发生器，将热量传给二回路，同时一回路中水还含有大量的硼酸作为反应堆慢化剂以控制堆芯反应性和功率水平。二回路的水为压力较低的可沸腾回路，主要功能是在蒸汽发生器中吸热气化，之后进入汽轮机厂房推动汽轮机发电，冷凝后再度进入蒸汽发生器吸热，进行下一个做工循环。</p>
@@ -202,6 +202,58 @@
         <tag>核电厂</tag>
         <tag>金属材料</tag>
         <tag>腐蚀</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试技巧 | 金属氧化膜的镀镍保护</title>
+    <url>/2023/06/01/S02_Ni_platting/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<blockquote>
+<p>氧化膜观察是材料均匀腐蚀分析过程中的重要一环，通常使用截面样品观察的方式进行氧化膜分析，这一过程需要首先使用线切割、慢速切割等方式切出截面，之后通过冷镶嵌或热镶嵌的方式将样品固定在镶料中，最后经过机械磨抛和振动抛光以获得无划痕的截面。然而在磨抛过程中，切削力将导致镶料与待观察样品分离出现缝隙，这一缝隙的存在会导致样品边缘过度磨削——即出现圆弧，最终导致较薄的氧化膜无法很好的被观察到。</p>
+<p>通过电镀方式将镀膜与待测表面紧密结合（原子级别），其结合力更强，磨削过程中不易发生分离，能够最大限度地保证较薄的氧化膜经过磨削后仍能保持同一平面，最终提升SEM的拍摄效果和能谱分析的精度。</p>
+<span id="more"></span>
+
+<p><strong>任务目标：</strong></p>
+<ul>
+<li>在均匀腐蚀样品表面镀膜2层，第一层为碳覆膜，第二层为电镀镍膜。</li>
+<li>镀膜后进行截面形貌观察，保证氧化膜完整性以及良好的观察效果。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="Step1：样品准备"><a href="#Step1：样品准备" class="headerlink" title="Step1：样品准备"></a>Step1：样品准备</h2><p>使用慢速切割机切片，样品沿刀片径向，氧化物面垂直于走刀方向。</p>
+<p>样品表面使用酒精超声清洗，去除表面污渍，并烘干，防止镀膜后膜破损。</p>
+<h2 id="Step2：碳覆膜（导电良好的样品可跳过）"><a href="#Step2：碳覆膜（导电良好的样品可跳过）" class="headerlink" title="Step2：碳覆膜（导电良好的样品可跳过）"></a>Step2：碳覆膜（导电良好的样品可跳过）</h2><p>首先制备原始状态材料，测试覆膜的强度、镶嵌磨抛后的脱落情况等。在确认蒸碳工艺及电镀覆膜工艺无误后再进行下一步操作。</p>
+<p>选用原始样品统一镀膜，蒸碳15s即可，20<em>10</em>1样品，预计一次4片。</p>
+<h2 id="Step3：电镀膜"><a href="#Step3：电镀膜" class="headerlink" title="Step3：电镀膜"></a>Step3：电镀膜</h2><ul>
+<li><strong>装置：</strong> 使用100ml玻璃杯，溶液配制约100mL；</li>
+<li><strong>溶液：</strong> 硫酸镍作主盐（250g/L）+氯化镍活化阳极（40g/L）+硼酸缓冲剂（20g/L）十二烷基硫酸钠润湿剂（0.1g/L）；</li>
+<li><strong>环境：</strong> 温度50℃，pH≈4；</li>
+<li><strong>电源：</strong> 1.4 V，1<del>4 A/dm ^2^ ，即0.01</del>0.04 mA/cm ^2^ ；</li>
+<li><strong>电极：</strong> 阳极为镍片，阴极为待镀样品；</li>
+</ul>
+<p>镀镍厚度估算：0.196<em>I</em>t，即1A，10分钟约1.96um。计划使用15min即（1+8）um厚度镍层。</p>
+<h2 id="Step4：镶样"><a href="#Step4：镶样" class="headerlink" title="Step4：镶样"></a><strong>Step4：镶样</strong></h2><p>切片后使用热镶，一组2~4片。</p>
+<p>磨抛时镀膜面垂直磨抛方向，400#砂纸磨抛时间尽可能短，不得大于50s。800#及1200#砂纸长时间磨抛划痕，最终1um抛光。</p>
+<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示："></a>效果展示：</h2><table>
+<thead>
+<tr>
+<th align="center"><img src="/2023/06/01/S02_Ni_platting/1685608654361.png" alt="1685608654361" title="未镀膜区域"></th>
+<th><img src="/2023/06/01/S02_Ni_platting/1685608673119.png" alt="1685608673119" title="镀膜较薄存在分离"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="/2023/06/01/S02_Ni_platting/1685608692080.png" alt="1685608692080" title="镀膜成功区域"></td>
+<td><img src="/2023/06/01/S02_Ni_platting/1685608741346.png" alt="1685608741346" title="镀膜成功区域"></td>
+</tr>
+</tbody></table>
+<p><img src="/2023/06/01/S02_Ni_platting/1685608909482.png" alt="1685608909482" title="SEM-EDS元素分布"></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+      <categories>
+        <category>材料分析</category>
+      </categories>
+      <tags>
+        <tag>电镀</tag>
+        <tag>微观分析</tag>
       </tags>
   </entry>
   <entry>
@@ -270,57 +322,5 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>测试技巧 | 金属氧化膜的镀镍保护</title>
-    <url>/2023/06/01/S02_Ni_platting/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<blockquote>
-<p>氧化膜观察是材料均匀腐蚀分析过程中的重要一环，通常使用截面样品观察的方式进行氧化膜分析，这一过程需要首先使用线切割、慢速切割等方式切出截面，之后通过冷镶嵌或热镶嵌的方式将样品固定在镶料中，最后经过机械磨抛和振动抛光以获得无划痕的截面。然而在磨抛过程中，切削力将导致镶料与待观察样品分离出现缝隙，这一缝隙的存在会导致样品边缘过度磨削——即出现圆弧，最终导致较薄的氧化膜无法很好的被观察到。</p>
-<p>通过电镀方式将镀膜与待测表面紧密结合（原子级别），其结合力更强，磨削过程中不易发生分离，能够最大限度地保证较薄的氧化膜经过磨削后仍能保持同一平面，最终提升SEM的拍摄效果和能谱分析的精度。</p>
-<span id="more"></span>
-
-<p><strong>任务目标：</strong></p>
-<ul>
-<li>在均匀腐蚀样品表面镀膜2层，第一层为碳覆膜，第二层为电镀镍膜。</li>
-<li>镀膜后进行截面形貌观察，保证氧化膜完整性以及良好的观察效果。</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="Step1：样品准备"><a href="#Step1：样品准备" class="headerlink" title="Step1：样品准备"></a>Step1：样品准备</h2><p>使用慢速切割机切片，样品沿刀片径向，氧化物面垂直于走刀方向。</p>
-<p>样品表面使用酒精超声清洗，去除表面污渍，并烘干，防止镀膜后膜破损。</p>
-<h2 id="Step2：碳覆膜（导电良好的样品可跳过）"><a href="#Step2：碳覆膜（导电良好的样品可跳过）" class="headerlink" title="Step2：碳覆膜（导电良好的样品可跳过）"></a>Step2：碳覆膜（导电良好的样品可跳过）</h2><p>首先制备原始状态材料，测试覆膜的强度、镶嵌磨抛后的脱落情况等。在确认蒸碳工艺及电镀覆膜工艺无误后再进行下一步操作。</p>
-<p>选用原始样品统一镀膜，蒸碳15s即可，20<em>10</em>1样品，预计一次4片。</p>
-<h2 id="Step3：电镀膜"><a href="#Step3：电镀膜" class="headerlink" title="Step3：电镀膜"></a>Step3：电镀膜</h2><ul>
-<li><strong>装置：</strong> 使用100ml玻璃杯，溶液配制约100mL；</li>
-<li><strong>溶液：</strong> 硫酸镍作主盐（250g/L）+氯化镍活化阳极（40g/L）+硼酸缓冲剂（20g/L）十二烷基硫酸钠润湿剂（0.1g/L）；</li>
-<li><strong>环境：</strong> 温度50℃，pH≈4；</li>
-<li><strong>电源：</strong> 1.4 V，1<del>4 A/dm ^2^ ，即0.01</del>0.04 mA/cm ^2^ ；</li>
-<li><strong>电极：</strong> 阳极为镍片，阴极为待镀样品；</li>
-</ul>
-<p>镀镍厚度估算：0.196<em>I</em>t，即1A，10分钟约1.96um。计划使用15min即（1+8）um厚度镍层。</p>
-<h2 id="Step4：镶样"><a href="#Step4：镶样" class="headerlink" title="Step4：镶样"></a><strong>Step4：镶样</strong></h2><p>切片后使用热镶，一组2~4片。</p>
-<p>磨抛时镀膜面垂直磨抛方向，400#砂纸磨抛时间尽可能短，不得大于50s。800#及1200#砂纸长时间磨抛划痕，最终1um抛光。</p>
-<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示："></a>效果展示：</h2><table>
-<thead>
-<tr>
-<th align="center"><img src="/2023/06/01/S02_Ni_platting/1685608654361.png" alt="1685608654361" title="未镀膜区域"></th>
-<th><img src="/2023/06/01/S02_Ni_platting/1685608673119.png" alt="1685608673119" title="镀膜较薄存在分离"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><img src="/2023/06/01/S02_Ni_platting/1685608692080.png" alt="1685608692080" title="镀膜成功区域"></td>
-<td><img src="/2023/06/01/S02_Ni_platting/1685608741346.png" alt="1685608741346" title="镀膜成功区域"></td>
-</tr>
-</tbody></table>
-<p><img src="/2023/06/01/S02_Ni_platting/1685608909482.png" alt="1685608909482" title="SEM-EDS元素分布"></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-      <categories>
-        <category>材料分析</category>
-      </categories>
-      <tags>
-        <tag>电镀</tag>
-        <tag>微观分析</tag>
-      </tags>
   </entry>
 </search>

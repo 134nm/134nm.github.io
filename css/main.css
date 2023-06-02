@@ -1168,12 +1168,6 @@ pre code {
 .links-of-author a {
   font-size: 0.8125em;
 }
-.links-of-author .fa,
-.links-of-author .fab,
-.links-of-author .far,
-.links-of-author .fas {
-  margin-right: 2px;
-}
 .sidebar .sidebar-button:not(:first-child) {
   margin-top: 15px;
 }
@@ -2575,14 +2569,14 @@ header.header {
 }
 @media (min-width: 1200px) {
   .sidebar-active {
-    padding-left: 320px;
+    padding-left: 180px;
   }
   .sidebar-active .footer-fixed {
-    left: 320px;
+    left: 180px;
   }
 }
 .sidebar {
-  left: -320px;
+  left: -180px;
 }
 .sidebar-active .sidebar {
   left: 0;
@@ -2596,7 +2590,7 @@ header.header {
   position: fixed;
   top: 0;
   transition: all 0.2s ease-out;
-  width: 320px;
+  width: 180px;
   z-index: 20;
 }
 .sidebar a {
@@ -2618,7 +2612,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #fffcff;
+  background: #f5005c;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
