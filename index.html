@@ -48,6 +48,8 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -161,8 +163,6 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style><link rel="alternate" href="/atom.xml" title="酥师傅的摸鱼日常" type="application/atom+xml">
-
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -275,7 +275,7 @@ mjx-container[display="true"] + br {
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -337,7 +337,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/06/03/c01-csharplibs/" class="post-title-link" itemprop="url">C#中好用的工具包</a>
+          <a href="/2023/06/03/c01-csharplibs/" class="post-title-link" itemprop="url">C#中好用的工具、第三方类库和一些操作心得</a>
         </h2>
 
         <div class="post-meta-container">
@@ -349,7 +349,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-06-03 16:55:52 / 修改时间：17:09:36" itemprop="dateCreated datePublished" datetime="2023-06-03T16:55:52+08:00">2023-06-03</time>
+      <time title="创建时间：2023-06-03 16:55:52 / 修改时间：17:17:08" itemprop="dateCreated datePublished" datetime="2023-06-03T16:55:52+08:00">2023-06-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -368,7 +368,7 @@ mjx-container[display="true"] + br {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>228</span>
+      <span>265</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -386,16 +386,18 @@ mjx-container[display="true"] + br {
     
     
     <div class="post-body" itemprop="articleBody">
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+          <hr>
 <blockquote>
-<p>收集一些开发设备控制软件过程中发现的好用的包以及一些简单的用法</p>
+<p>收集一些开发设备控制软件过程中发现的好用的包以及一些简单的用法，涉及到绘图、通讯、文件读写等操作。以及也会分享一些写程序和制作控件的心得。</p>
 </blockquote>
-<h1 id="绘图相关"><a href="#绘图相关" class="headerlink" title="绘图相关"></a>绘图相关</h1><h1 id="文件读写相关"><a href="#文件读写相关" class="headerlink" title="文件读写相关"></a>文件读写相关</h1><h2 id="SharpConfig——CGF-x2F-INI设置文件的简单读写"><a href="#SharpConfig——CGF-x2F-INI设置文件的简单读写" class="headerlink" title="SharpConfig——CGF/INI设置文件的简单读写"></a>SharpConfig——CGF/INI设置文件的简单读写</h2><p><a target="_blank" rel="noopener" href="https://www.nuget.org/packages/sharpconfig"><img src="https://buildstats.info/nuget/sharpconfig" alt="NuGet version"></a></p>
-<p>本人的研究中主要用来进行项目设置、样品参数、加载程序段等数据的读写。原本使用 <code>.ini</code>文件存储文件信息，然后进行读写，操作较为繁杂，很难实现批量参数的快速读取和保存，代码写起来也不够简洁。</p>
-<h3 id="cfg和-ini文件格式定义"><a href="#cfg和-ini文件格式定义" class="headerlink" title=".cfg和 .ini文件格式定义"></a><code>.cfg</code>和 <code>.ini</code>文件格式定义</h3><figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 表示注释</span></span><br><span class="line"><span class="section">[section_name]</span> <span class="comment"># 表示一节section</span></span><br><span class="line"><span class="attr">Somestr</span> = hello world! <span class="comment"># 表示一个键key及其值value</span></span><br><span class="line"><span class="attr">Somebool</span> = <span class="literal">true</span> <span class="comment"># 可以定义bool，int，double等变量</span></span><br><span class="line"><span class="attr">SomeArray</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>} <span class="comment"># 定义数组</span></span><br><span class="line"></span><br><span class="line"><span class="section">[section2]</span></span><br><span class="line"><span class="comment"># 第二个节，本项目中可以用来表示项目，或者每个样品单元的参数</span></span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="C-中的简单使用"><a href="#C-中的简单使用" class="headerlink" title="C#中的简单使用"></a>C#中的简单使用</h3><p>using SharpConfig;</p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/06/03/c01-csharplibs/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
