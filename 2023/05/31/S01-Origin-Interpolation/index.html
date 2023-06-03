@@ -19,27 +19,34 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"c00k1s.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","width":180,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":false,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="文章内容需要密码才能访问">
+    <meta name="description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://c00k1s.github.io/2023/05/29/hello-world/index.html">
+<meta property="og:title" content="测试技巧 | 插值外推及拉伸数据的刚度修正">
+<meta property="og:url" content="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/index.html">
 <meta property="og:site_name" content="酥师傅的摸鱼日常">
-<meta property="og:description" content="文章内容需要密码才能访问">
+<meta property="og:description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-29T05:50:00.000Z">
-<meta property="article:modified_time" content="2023-06-01T07:48:58.406Z">
+<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/1685505760105.png">
+<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/1685505851848.png">
+<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/1685505907202.png">
+<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/1685505978258.png">
+<meta property="article:published_time" content="2023-05-31T03:54:05.000Z">
+<meta property="article:modified_time" content="2023-06-02T11:56:56.340Z">
 <meta property="article:author" content="可爱羊师傅的酥饼">
+<meta property="article:tag" content="数据处理">
+<meta property="article:tag" content="OriginLab">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/1685505760105.png">
 
 
-<link rel="canonical" href="https://c00k1s.github.io/2023/05/29/hello-world/">
+<link rel="canonical" href="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://c00k1s.github.io/2023/05/29/hello-world/","path":"2023/05/29/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/","path":"2023/05/31/S01-Origin-Interpolation/","title":"测试技巧 | 插值外推及拉伸数据的刚度修正"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | 酥师傅的摸鱼日常</title>
+<title>测试技巧 | 插值外推及拉伸数据的刚度修正 | 酥师傅的摸鱼日常</title>
   
 
 
@@ -129,7 +136,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -142,6 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E5%BA%A6%E6%9B%B2%E7%BA%BF%E6%B5%8B%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">刚度曲线测量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">处理数据的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">实际效果</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,13 +164,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -212,7 +220,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://c00k1s.github.io/2023/05/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/001.gif">
@@ -225,12 +233,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | 酥师傅的摸鱼日常">
+      <meta itemprop="name" content="测试技巧 | 插值外推及拉伸数据的刚度修正 | 酥师傅的摸鱼日常">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          测试技巧 | 插值外推及拉伸数据的刚度修正
         </h1>
 
         <div class="post-meta-container">
@@ -241,14 +249,23 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-05-29 13:50:00" itemprop="dateCreated datePublished" datetime="2023-05-29T13:50:00+08:00">2023-05-29</time>
+      <time title="创建时间：2023-05-31 11:54:05" itemprop="dateCreated datePublished" datetime="2023-05-31T11:54:05+08:00">2023-05-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-01 15:48:58" itemprop="dateModified" datetime="2023-06-01T15:48:58+08:00">2023-06-01</time>
+      <time title="修改时间：2023-06-02 19:56:56" itemprop="dateModified" datetime="2023-06-02T19:56:56+08:00">2023-06-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">材料分析</span></a>
+        </span>
     </span>
 
   
@@ -258,14 +275,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>78</span>
+      <span>618</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -275,18 +292,32 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误 ≈w≈" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="d236ec911316637593d58e9bfd948879ba9390f6a268e9b33109f2039be53433">165d50f05814027fb7fe5e4ae8a088d8f56f9f99da4d666013e31ffb8bb0171fc7fb7e123a0dbdaace91d8f5befd348f7497172cd93b2d0c078cfb6f4de177da8f909cc1539792423e66994369104114446ccda436fed79a3a86a57d1cf09b3b8c2c135ce23a135666a40ab29cdef85e2961d2d820b4e027a7521b1c847a3b63f87344a5871709d2f00513f817638d31ffb53e233d16a3c1e8694ffd462e708bccc67b3a7e1b1b86e6bc296820183449b11cc828b51858cfbc1c2886e925ccc20c484bc8876053ce72e838bcb241dd1720631d7b71594aaa37758836111e4b1b39415b1080d41d4a81e95b4c9b3515934dee4aa071151ca5ef3b26a61ef527649ff3e2c741f7804460358e417c7d7a1c3e277aa6fed6c60af7ced93a09f8abca54204f80de11642b7e7a62e51f18102ce6c8cabdbea72e0a81d27e49010ff9f0d7c194d9841d837aa612d599d0aa4c483aa08212bacce55b9b4b210ed2c905cf563c67ac6e60195fb04b4fff2c9f35bba89b2d8463ec9fa1b8bca58aea3e15cda09aafa06f7145b2b6305d66cd1ed3f5386c0caa48de2d272b5d63236dcc6895bdd2b3742af49a236bac6e00638748e991a453e37500442d4213e03e8d2f9a36a6d4d91ba45fc1d24a053059aa806ce80d43c2d0dfe101ce43620982e21df266f98d826e58824ba4c0e613c6c317e28325a460e0b7c628727e4f065cc4274ba4f286a8aaa01078e197264df7918884894e4f0a2a1d38c8056cdcd0efaab26a9c420869716554a626cdb803ac38607c2049a18e1e76c95e0b8c9c9d808ae406bdf6568d121e1544799996888e8cc5c2c7e390d35ef4dd966d7cf533b976c25821c559311de99eb7cbdb5fec7f99ef9c6306610d3e91f41598ae28f5db6407936b8319e3f6c1ac86fb4dc239ae33e2782436cd73c44311270db696d4f6f7c87d45cb359853f5c30a8744d8c88bed8864d1ed6ce9c09dc32526ce8304960d98dc4fdbb8cee1cc7c728856ea578ae82fbad9ac12bd19a747e3e2a869bfb22b16f38a98605f8dffb711dd48e45e74ed9b28c57b5e80bfabad5938049032274ef8e367e0c028a5eb1b25aaa67d165257356d7f517c2f8a6004695fd27bd1ccc3a9093d6e9764b9b3c0c3b93cf33267643de40f77269e32f30db42794c0cddc3ac569c3babf46a15740607af8064a8d1753075c5af5c46e289a7ef2279d229f4def2d4d41a2abb7edaf34064fa8edca9edb37e2e3798f0bb2c3bb6f4a10daa13d17e90d2fc012e025c035872e3d1f914078716fd15683f0bdf5297d3f7df6a4dd1b2230cb5f1f193fa5535462a8c96efbae439369660f5cab3cae393ec203fd87674a7765964a7152b34a6bb28d9590220a9daa618e5b591761fabd2277ebe44071a44ef7ce3489a1ca957d09925b573423004ff152b2ecb8a8953eeb2f2daaad59c8a37dacacabdd1443fed6338a13eb23a204fd38c0c9d01d8e212e0e0b2d5e5b79e5a6a71a8832cec623c23d6a751fba3e81d87d2cad2e7bbd73254117a46a5943fc7f81e5c412d8754e08c0c7a839107a0778c2088d9e9cc56c61ef3205e4052d69b7cb393c12eba6c47df9752fdea2c583a9a998e4790f1789108a7e7fb7b11bc604c40b8217ea8f560f9d2b61245b167031c38347ac6cc6a9ff0210fc91cd74cc840f44c0a17fe9fcdbaacacd9fb34ee1b45ce66e8a6056345ac7023668d983e3aeae30e4fb17cad97f3ea7afec3a84bb31bad9971ac97b679ed1cf389e5efcbcd1b4c7ea0cbedaf2d118ebdd0a87b57b5a117a090ca7ff213066d22c778ab5f6a1ac29aab617bb6be01a1abe1e343b85a549d5f325e9f8733792806a2307edc04bd4ed38cca2338d59d610ecaa29b43f6d00610c4fa268381edb05d51a2e5ba26dfa66c5c536d5b0502759158dcedb4fe4e6027c15aa299bc2b26ae4ca3066cdc949b8b7a1adffeeae02ccd2e5cfbf71ae345f00e353d76cc7dab870e4e6343b891979ec721766f557953c225de0b5f25bc84da9cda078cdddda61eaae4c271b30149b92b12215f57c38dbe121f8953b587872e972c3190dee3ca8624a1823c7ee6aadc1c714a1c7eca21cdd128dcea9fbc1b005e3fe0fd75282d067c0527c1674ea8de8728f24b047c59e7fc3de052631f003ed671260ad17f154a3e73b8ec6efa4302af59c1bad89497a0abec07d24726961e0b6354655e9fccf78edf53b51ede76f60f4de5598511db96cbf8259cf139c8b06fa5888e6092c8cd7bcf3f11026b7ee67909dcb8bd230260d6015784a7cfeeed652ad98094e55386a5ab3fd4e4c519f896be989d7be80a7039ef09492d10f24a19d9355f809b1b8e749d04569248a66a64907a2ea171b040da89bc1db9ffd11275cbc90d783d4636d6f48646ae24d91db0c4ef1ccf7c3a2eb43247cc04ecf0636a356df837fa600b3cdcf2e31e3f52baac71b0f7dfd9d7c20e52b6a5110c7996eb8961bc7137fcb11bf8d30f2952506be9e1fe65cb28d5c419dca0f8a5175c469617d9a563df6e9b5273cd65a19e11bbb96462c7b4bd9fdedd9df0bf8c85e822450d3db0f3ca10a3b656a3fe29ba49043f6ca3df6fe47d4d5b288dacc2819439c5a6c1d137eac4aacc09843decf57b907a109447b1eaf8e7a663f68fa643fe8d2f875acdf5ed65a3684d39c147ecb252759f06c177e1397b157bc2fbeb8cb52961ab529e6070ba6c3e83aad32662bc40d95b8a3470c485198f36c4e8bbd5d4e4d4e189f1702e34d0c5543f2a3d968277bb8a3d22429fa3c0d3dca53226e803c0f9948edd174237aa597a6aae2f08f499848bddf019633fec633e31024c6ce735ab68e330f0a94cf55bbc6f2298548bcc8d471bcc588962513bca8678e96016bada8c1245b15adad67dc3871573b7de7e532be9270d0924ca7db6b7d043d9ebe87740b228fc54171fc1767a49403ded9611252b2148e34d63a5c17aad6ff615bad45de2329a1cbc475570e9e785151f48cdc8830b326aa940a317042b400fde5dd94b44cca790f5ce4b526872697e7ef51df720f8b9331e130486a8a3d05780fad333e219c094e5558ac08f989fd0aafe3dcb9479b8f58c540e302f417e76717ab73edcffdf2cfc53440d243edc5fa71e1de347c5fd2a739d190eb15202bb8a2b73d6afad9765098893389425d93a1b5401c8e6694f7c6fc1c9640f7b42abbac09cc4a2ffecbc2b74c68d3162cbd32032eb9bae5ebda5ef7b0b96811ad68e3d7fa7d5bfbb786259a0d6fdd6fecd2fc0ac61c53ed61e22f08367f56e62e4776bfb921dad60069fe38e9cb3ed40041c2631dae2664dfdd4eeb6267109ba50b8c8bd112e6ed8582d3bbb01b1bd7b23fe7140318872f5cea0f0ace16983ded21d66b8d7af3b5fb8a0126e61a4b08ee93be8af88f17658dfd5ef8998d83f12f41b512dac6c5a7432d5bb8f218d0f4785903c01104684480a9797eeb3b918541b091b87fa60deff0f8eb14cd1b58c45414cbb78adc006dd9218c8b642ba62868c4c3f3d07c6789b4b8263d3bc7162a83fae19ed0ba39bcd0cf51ff5c7aefe4fdca1e3fa5a71bb41ca0856d2497e03bd49b0227dae4a92cccb7a1658b9cd02facc7f5bfc05a7ad3b0673ce564536ac9525ab32846027d8667df1ecfec7a2675b85c4dd3aeba858afb578949094217b767d1a198d3ee2bb7e656bb14dfa92e686417d47341d12b9bcc79ee7156550bafb0ab94f2e6d148750c54ed6f064b9e058757499f1a94c46d397d8c7d82e9d9bf5192540d14f7459e7758ceefcf006228d2d41ef5c1b10c5cfe18fdfc80d8dbebbec4e99de45e62219932f566bece6b693cec6cdda41d3ad80fe2df5e0f3f78c67cb349a72ec50efb86f0abc9e2299a75aeaf3ae483e4c5f346c2a94018c0e52e9393a71a580c595101b24701436be095bf5377fc08e8f389dca26638b1ff4a42e25968e5be24ffac50aaa3f22293bfc2a5462c0ffc230faee79019b8e64562a6749340d9b0969e6a41adeb65ea3970d87e5e9d0dd89a65f7191e780c6378a55511</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密码访问</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
+<p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
+<p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
+</blockquote>
+<blockquote>
+<p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
+</blockquote>
+<h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
+<p>注意夹具的种类不要更换，否则测量的误差更大（其实这个方法本身的误差也很大，仅具有有限的参考作用，切勿当作高精度测量的方法使用）。</p>
+<p>对数据点的处理应当是：测量位移 减去 相同载荷测得的刚度曲线位移。</p>
+<p>因此我们需要对刚度曲线进行差值，在相同载荷处差值。</p>
+<h2 id="处理数据的操作"><a href="#处理数据的操作" class="headerlink" title="处理数据的操作"></a>处理数据的操作</h2><ul>
+<li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
+<li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
+<li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
+<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。</li>
+</ul>
+<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505760105.png" alt="1685505760105" title="差值-外推操作"><em>插值-外推</em></p>
+<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505851848.png" alt="1685505851848"><em>设定参数</em></p>
+<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="/2023/05/31/S01-Origin-Interpolation/1685505907202.png" alt="1685505907202"><em>对实验数据结果进行处理</em></p>
+<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505978258.png" alt="1685505978258"><em>修正前后的曲线</em></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
     </div>
 
     
@@ -303,7 +334,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://c00k1s.github.io/2023/05/29/hello-world/" title="Hello World">https://c00k1s.github.io/2023/05/29/hello-world/</a>
+      <a href="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/" title="测试技巧 | 插值外推及拉伸数据的刚度修正">https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC</a> 许可协议。转载请注明出处！
@@ -311,15 +342,22 @@
 </ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" rel="tag"># 数据处理</a>
+              <a href="/tags/OriginLab/" rel="tag"># OriginLab</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/05/31/B01-2PLC4R/" rel="prev" title="说明书 | 双PLC四轴软件的使用说明">
+                  <i class="fa fa-chevron-left"></i> 说明书 | 双PLC四轴软件的使用说明
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/29/M01_corr_npp/" rel="next" title="核电厂中的材料腐蚀行为">
-                  核电厂中的材料腐蚀行为 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/06/01/D01-myPhD/" rel="next" title="酥师傅的毕业寄">
+                  酥师傅的毕业寄 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -360,7 +398,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
   </span>
 </div>
 
@@ -404,7 +442,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/2023/05/29/hello-world/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 

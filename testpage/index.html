@@ -19,34 +19,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"c00k1s.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","width":180,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":false,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="测试技巧 | 插值外推及拉伸数据的刚度修正">
-<meta property="og:url" content="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="TEST">
+<meta property="og:url" content="https://c00k1s.github.io/testpage/index.html">
 <meta property="og:site_name" content="酥师傅的摸鱼日常">
-<meta property="og:description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/1685505760105.png">
-<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/1685505851848.png">
-<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/1685505907202.png">
-<meta property="og:image" content="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/1685505978258.png">
-<meta property="article:published_time" content="2023-05-31T03:54:05.000Z">
-<meta property="article:modified_time" content="2023-06-02T11:56:56.340Z">
+<meta property="article:published_time" content="2023-06-02T07:26:40.000Z">
+<meta property="article:modified_time" content="2023-06-03T09:19:50.486Z">
 <meta property="article:author" content="可爱羊师傅的酥饼">
-<meta property="article:tag" content="数据处理">
-<meta property="article:tag" content="OriginLab">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/1685505760105.png">
 
 
-<link rel="canonical" href="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/">
+<link rel="canonical" href="https://c00k1s.github.io/testpage/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/","path":"2023/05/31/S01_Origin_Interpolation/","title":"测试技巧 | 插值外推及拉伸数据的刚度修正"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://c00k1s.github.io/testpage/index.html","path":"testpage/index.html","title":"TEST"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>测试技巧 | 插值外推及拉伸数据的刚度修正 | 酥师傅的摸鱼日常</title>
+<title>TEST | 酥师傅的摸鱼日常
+</title>
   
 
 
@@ -136,7 +128,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -149,7 +141,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E5%BA%A6%E6%9B%B2%E7%BA%BF%E6%B5%8B%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">刚度曲线测量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">处理数据的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">实际效果</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,13 +155,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -209,165 +200,40 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner page posts-expand">
 
 
-  
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
 
+<h1 class="post-title" itemprop="name headline">TEST
+</h1>
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/001.gif">
-      <meta itemprop="name" content="可爱羊师傅的酥饼">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="酥师傅的摸鱼日常">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="测试技巧 | 插值外推及拉伸数据的刚度修正 | 酥师傅的摸鱼日常">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          测试技巧 | 插值外推及拉伸数据的刚度修正
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-31 11:54:05" itemprop="dateCreated datePublished" datetime="2023-05-31T11:54:05+08:00">2023-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-02 19:56:56" itemprop="dateModified" datetime="2023-06-02T19:56:56+08:00">2023-06-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">材料分析</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>618</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
+<div class="post-meta-container">
 </div>
 
-        </div>
-      </header>
+</header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
-<p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
-<span id="more"></span>
+      
+      
+      <div class="post-body">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
 
-<blockquote>
-<p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
-</blockquote>
-<blockquote>
-<p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
-</blockquote>
-<h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
-<p>注意夹具的种类不要更换，否则测量的误差更大（其实这个方法本身的误差也很大，仅具有有限的参考作用，切勿当作高精度测量的方法使用）。</p>
-<p>对数据点的处理应当是：测量位移 减去 相同载荷测得的刚度曲线位移。</p>
-<p>因此我们需要对刚度曲线进行差值，在相同载荷处差值。</p>
-<h2 id="处理数据的操作"><a href="#处理数据的操作" class="headerlink" title="处理数据的操作"></a>处理数据的操作</h2><ul>
-<li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
-<li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
-<li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
-<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。</li>
-</ul>
-<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505760105.png" alt="1685505760105" title="差值-外推操作"><em>插值-外推</em></p>
-<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505851848.png" alt="1685505851848"><em>设定参数</em></p>
-<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="/2023/05/31/S01_Origin_Interpolation/1685505907202.png" alt="1685505907202"><em>对实验数据结果进行处理</em></p>
-<p><img src="/2023/05/31/S01_Origin_Interpolation/1685505978258.png" alt="1685505978258"><em>修正前后的曲线</em></p>
+<div class="markmap-container" style="height:800px">
+  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;思维导图&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;主题&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;此标题1&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;<a href=\&quot;https://www.sjtu.edu.cn\&quot;>网页</a>&quot;}]}]}"></svg>
+</div>
+
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+      </div>
+      
+      
+      
     </div>
 
     
     
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>可爱羊师傅的酥饼
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/" title="测试技巧 | 插值外推及拉伸数据的刚度修正">https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" rel="tag"># 数据处理</a>
-              <a href="/tags/OriginLab/" rel="tag"># OriginLab</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2023/05/31/B01_2PLC4R/" rel="prev" title="说明书 | 双PLC四轴软件的使用说明">
-                  <i class="fa fa-chevron-left"></i> 说明书 | 双PLC四轴软件的使用说明
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2023/06/01/D01_myPhD/" rel="next" title="酥师傅的毕业寄">
-                  酥师傅的毕业寄 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
 
 
 </div>
@@ -398,7 +264,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
   </span>
 </div>
 
@@ -442,7 +308,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/2023/05/31/S01_Origin_Interpolation/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://c00k1s.github.io/testpage/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
@@ -465,5 +331,5 @@ window.darkmode = darkmode;
 darkmode.showWidget();
 </script>
 
-</body>
+<script src="/js/markmap.js"></script></body>
 </html>
