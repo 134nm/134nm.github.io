@@ -19,34 +19,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"134nm.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","width":180,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":false,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
+    <meta name="description" content="收集一些开发设备控制软件过程中发现的好用的包以及一些简单的用法，涉及到绘图、通讯、文件读写等操作。以及也会分享一些写程序和制作控件的心得。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试技巧 | 插值外推及拉伸数据的刚度修正">
-<meta property="og:url" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/index.html">
-<meta property="og:site_name" content="134nm | A Blog for Nuclear Material">
-<meta property="og:description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
+<meta property="og:title" content="编程 | C#中好用的工具、第三方类库和一些操作心得">
+<meta property="og:url" content="https://134nm.github.io/2023/06/P01-csharplibs/index.html">
+<meta property="og:site_name" content="134nm | Blog for Nuclear Material">
+<meta property="og:description" content="收集一些开发设备控制软件过程中发现的好用的包以及一些简单的用法，涉及到绘图、通讯、文件读写等操作。以及也会分享一些写程序和制作控件的心得。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505760105.png">
-<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505851848.png">
-<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505907202.png">
-<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505978258.png">
-<meta property="article:published_time" content="2023-05-31T03:54:05.000Z">
-<meta property="article:modified_time" content="2023-06-02T11:56:56.340Z">
+<meta property="og:image" content="https://buildstats.info/nuget/sharpconfig">
+<meta property="article:published_time" content="2023-06-03T08:55:52.000Z">
+<meta property="article:modified_time" content="2023-06-03T09:42:07.800Z">
 <meta property="article:author" content="摸鱼的酥师傅">
-<meta property="article:tag" content="数据处理">
-<meta property="article:tag" content="OriginLab">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="NuGet">
+<meta property="article:tag" content="Visual Studio">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505760105.png">
+<meta name="twitter:image" content="https://buildstats.info/nuget/sharpconfig">
 
 
-<link rel="canonical" href="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/">
+<link rel="canonical" href="https://134nm.github.io/2023/06/P01-csharplibs/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/","path":"2023/05/31/S01-Origin-Interpolation/","title":"测试技巧 | 插值外推及拉伸数据的刚度修正"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://134nm.github.io/2023/06/P01-csharplibs/","path":"2023/06/P01-csharplibs/","title":"编程 | C#中好用的工具、第三方类库和一些操作心得"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>测试技巧 | 插值外推及拉伸数据的刚度修正 | 134nm | A Blog for Nuclear Material</title>
+<title>编程 | C#中好用的工具、第三方类库和一些操作心得 | 134nm | Blog for Nuclear Material</title>
   
 
 
@@ -59,9 +57,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="alternate" href="/atom.xml" title="134nm | Blog for Nuclear Material" type="application/atom+xml">
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="alternate" href="/atom.xml" title="134nm | A Blog for Nuclear Material" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -82,7 +80,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">134nm | A Blog for Nuclear Material</p>
+      <p class="site-title">134nm | Blog for Nuclear Material</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">摸鱼ing</p>
@@ -149,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E5%BA%A6%E6%9B%B2%E7%BA%BF%E6%B5%8B%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">刚度曲线测量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">处理数据的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">实际效果</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E7%9B%B8%E5%85%B3"><span class="nav-number">1.</span> <span class="nav-text">绘图相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TeeChart"><span class="nav-number">1.1.</span> <span class="nav-text">TeeChart</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E7%9B%B8%E5%85%B3"><span class="nav-number">2.</span> <span class="nav-text">文件读写相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SharpConfig%E2%80%94%E2%80%94CGF-x2F-INI%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E7%AE%80%E5%8D%95%E8%AF%BB%E5%86%99"><span class="nav-number">2.1.</span> <span class="nav-text">SharpConfig——CGF&#x2F;INI设置文件的简单读写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cfg%E5%92%8C-ini%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">.cfg和 .ini文件格式定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-%E4%B8%AD%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.2.</span> <span class="nav-text">C#中的简单使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%86%99ini%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">读写ini的方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AA%97%E5%8F%A3%E4%B8%8E%E6%8E%A7%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">用户自定义窗口与控件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E8%BE%93%E5%85%A5%E6%A1%86"><span class="nav-number">3.1.</span> <span class="nav-text">IP输入框</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%BD%E8%80%90%E5%BE%B7PLC%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.</span> <span class="nav-text">施耐德PLC通讯协议</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -220,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/">
+    <link itemprop="mainEntityOfPage" href="https://134nm.github.io/2023/06/P01-csharplibs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/001.gif">
@@ -228,17 +226,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="134nm | A Blog for Nuclear Material">
+      <meta itemprop="name" content="134nm | Blog for Nuclear Material">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="测试技巧 | 插值外推及拉伸数据的刚度修正 | 134nm | A Blog for Nuclear Material">
+      <meta itemprop="name" content="编程 | C#中好用的工具、第三方类库和一些操作心得 | 134nm | Blog for Nuclear Material">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          测试技巧 | 插值外推及拉伸数据的刚度修正
+          编程 | C#中好用的工具、第三方类库和一些操作心得
         </h1>
 
         <div class="post-meta-container">
@@ -248,15 +246,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-05-31 11:54:05" itemprop="dateCreated datePublished" datetime="2023-05-31T11:54:05+08:00">2023-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-02 19:56:56" itemprop="dateModified" datetime="2023-06-02T19:56:56+08:00">2023-06-02</time>
+      <time title="创建时间：2023-06-03 16:55 / 修改时间：17:42" itemprop="dateCreated datePublished" datetime="2023-06-03T16:55:52+08:00">2023-06-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,7 +256,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">材料分析</span></a>
+          <a href="/categories/%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%B6%E9%80%A0/" itemprop="url" rel="index"><span itemprop="name">设计与制造</span></a>
         </span>
     </span>
 
@@ -275,14 +267,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>618</span>
+      <span>382</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -293,31 +285,25 @@
     
     
     <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
-<p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
+<blockquote>
+<p>收集一些开发设备控制软件过程中发现的好用的包以及一些简单的用法，涉及到绘图、通讯、文件读写等操作。以及也会分享一些写程序和制作控件的心得。</p>
+</blockquote>
 <span id="more"></span>
 
-<blockquote>
-<p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
+<h1 id="绘图相关"><a href="#绘图相关" class="headerlink" title="绘图相关"></a>绘图相关</h1><h2 id="TeeChart"><a href="#TeeChart" class="headerlink" title="TeeChart"></a>TeeChart</h2><blockquote>
+<p>待完成</p>
 </blockquote>
-<blockquote>
-<p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
+<h1 id="文件读写相关"><a href="#文件读写相关" class="headerlink" title="文件读写相关"></a>文件读写相关</h1><h2 id="SharpConfig——CGF-x2F-INI设置文件的简单读写"><a href="#SharpConfig——CGF-x2F-INI设置文件的简单读写" class="headerlink" title="SharpConfig——CGF/INI设置文件的简单读写"></a>SharpConfig——CGF/INI设置文件的简单读写</h2><p><a target="_blank" rel="noopener" href="https://www.nuget.org/packages/sharpconfig">nuget地址：<img src="https://buildstats.info/nuget/sharpconfig" alt="NuGet version"></a></p>
+<p>在我的项目中主要用来进行项目设置、样品参数、加载程序段等数据的读写。原本使用 <code>.ini</code>文件存储文件信息，然后进行读写，操作较为繁杂，很难实现批量参数的快速读取和保存，代码写起来也不够简洁。</p>
+<h3 id="cfg和-ini文件格式定义"><a href="#cfg和-ini文件格式定义" class="headerlink" title=".cfg和 .ini文件格式定义"></a><code>.cfg</code>和 <code>.ini</code>文件格式定义</h3><figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 表示注释</span></span><br><span class="line"><span class="section">[General]</span> <span class="comment"># 表示一节section</span></span><br><span class="line"><span class="attr">Somestr</span> = hello world! <span class="comment"># 表示一个键key及其值value</span></span><br><span class="line"><span class="attr">Somebool</span> = <span class="literal">true</span> <span class="comment"># 可以定义bool，int，double等变量</span></span><br><span class="line"><span class="attr">SomeArray</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>} <span class="comment"># 定义数组</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Samples_a]</span></span><br><span class="line"><span class="comment"># 第二个节，本项目中可以用来表示项目，或者每个样品单元的参数</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="C-中的简单使用"><a href="#C-中的简单使用" class="headerlink" title="C#中的简单使用"></a>C#中的简单使用</h3><figure class="highlight csharp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> SharpConfig</span><br><span class="line"><span class="comment">// ----</span></span><br><span class="line"><span class="keyword">class</span> <span class="title">xxxxx</span>{</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">	<span class="keyword">var</span> config = Configuration.LoadFromFile(<span class="string">"sample.cfg"</span>); <span class="comment">// 加载cfg文件</span></span><br><span class="line">	<span class="keyword">var</span> Gen_section = config[<span class="string">"General"</span>]; <span class="meta"># 加载其中节</span></span><br><span class="line"></span><br><span class="line">	String astr = Gen_section[<span class="string">"Somestr"</span>].StringValue; <span class="comment">// 读取key“Somestr”的值 </span></span><br><span class="line">	<span class="built_in">int</span>[] aintarray = Gen_section[<span class="string">"SomeArray"</span>].IntValueArray; <span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用户自定义类型 Sample</span></span><br><span class="line">	<span class="keyword">var</span> SampleA = config[<span class="string">"Sample_a"</span>].ToObject&lt;Sample&gt;();</span><br><span class="line">...</span><br><span class="line"><span class="comment">// 新建一个configuration</span></span><br><span class="line">	<span class="keyword">var</span> myConfig = <span class="keyword">new</span> Configuration();</span><br><span class="line">	myConfig[<span class="string">"Video"</span>][<span class="string">"Width"</span>].IntValue = <span class="number">1920</span>;</span><br><span class="line">	myConfig[<span class="string">"Video"</span>][<span class="string">"Height"</span>].IntValue = <span class="number">1080</span>;</span><br><span class="line">	myConfig[<span class="string">"Video"</span>][<span class="string">"Formats"</span>].StringValueArray = <span class="keyword">new</span>[] { <span class="string">"RGB32"</span>, <span class="string">"RGBA32"</span> };</span><br><span class="line"><span class="comment">// 保存“myConfig”</span></span><br><span class="line">	myConfig.SaveToFile(<span class="string">"myConfig.cfg"</span>);   </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h2 id="读写ini的方法"><a href="#读写ini的方法" class="headerlink" title="读写ini的方法"></a>读写ini的方法</h2><blockquote>
+<p>待完成</p>
 </blockquote>
-<h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
-<p>注意夹具的种类不要更换，否则测量的误差更大（其实这个方法本身的误差也很大，仅具有有限的参考作用，切勿当作高精度测量的方法使用）。</p>
-<p>对数据点的处理应当是：测量位移 减去 相同载荷测得的刚度曲线位移。</p>
-<p>因此我们需要对刚度曲线进行差值，在相同载荷处差值。</p>
-<h2 id="处理数据的操作"><a href="#处理数据的操作" class="headerlink" title="处理数据的操作"></a>处理数据的操作</h2><ul>
-<li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
-<li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
-<li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
-<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。</li>
-</ul>
-<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505760105.png" alt="1685505760105" title="差值-外推操作"><em>插值-外推</em></p>
-<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505851848.png" alt="1685505851848"><em>设定参数</em></p>
-<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="/2023/05/31/S01-Origin-Interpolation/1685505907202.png" alt="1685505907202"><em>对实验数据结果进行处理</em></p>
-<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505978258.png" alt="1685505978258"><em>修正前后的曲线</em></p>
-<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+<h1 id="用户自定义窗口与控件"><a href="#用户自定义窗口与控件" class="headerlink" title="用户自定义窗口与控件"></a>用户自定义窗口与控件</h1><h2 id="IP输入框"><a href="#IP输入框" class="headerlink" title="IP输入框"></a>IP输入框</h2><h1 id="施耐德PLC通讯协议"><a href="#施耐德PLC通讯协议" class="headerlink" title="施耐德PLC通讯协议"></a>施耐德PLC通讯协议</h1><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
     </div>
 
     
@@ -334,7 +320,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/" title="测试技巧 | 插值外推及拉伸数据的刚度修正">https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/</a>
+      <a href="https://134nm.github.io/2023/06/P01-csharplibs/" title="编程 | C#中好用的工具、第三方类库和一些操作心得">https://134nm.github.io/2023/06/P01-csharplibs/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC</a> 许可协议。转载请注明出处！
@@ -343,22 +329,20 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" rel="tag"># 数据处理</a>
-              <a href="/tags/OriginLab/" rel="tag"># OriginLab</a>
+              <a href="/tags/C/" rel="tag"># C#</a>
+              <a href="/tags/NuGet/" rel="tag"># NuGet</a>
+              <a href="/tags/Visual-Studio/" rel="tag"># Visual Studio</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/05/31/B01-2PLC4R/" rel="prev" title="说明书 | 双PLC四轴软件的使用说明">
-                  <i class="fa fa-chevron-left"></i> 说明书 | 双PLC四轴软件的使用说明
+                <a href="/2023/06/S02-Ni-platting/" rel="prev" title="测试技巧 | 金属氧化膜的镀镍保护">
+                  <i class="fa fa-chevron-left"></i> 测试技巧 | 金属氧化膜的镀镍保护
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/06/01/D01-myPhD/" rel="next" title="酥师傅的毕业寄">
-                  酥师傅的毕业寄 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -442,7 +426,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://134nm.github.io/2023/06/P01-csharplibs/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 

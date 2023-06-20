@@ -19,35 +19,34 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"134nm.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","width":180,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":false,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="氧化膜观察是材料均匀腐蚀分析过程中的重要一环，通常使用截面样品观察的方式进行氧化膜分析，这一过程需要首先使用线切割、慢速切割等方式切出截面，之后通过冷镶嵌或热镶嵌的方式将样品固定在镶料中，最后经过机械磨抛和振动抛光以获得无划痕的截面。然而在磨抛过程中，切削力将导致镶料与待观察样品分离出现缝隙，这一缝隙的存在会导致样品边缘过度磨削——即出现圆弧，最终导致较薄的氧化膜无法很好的被观察到。 通过电镀">
+    <meta name="description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试技巧 | 金属氧化膜的镀镍保护">
-<meta property="og:url" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/index.html">
-<meta property="og:site_name" content="134nm | A Blog for Nuclear Material">
-<meta property="og:description" content="氧化膜观察是材料均匀腐蚀分析过程中的重要一环，通常使用截面样品观察的方式进行氧化膜分析，这一过程需要首先使用线切割、慢速切割等方式切出截面，之后通过冷镶嵌或热镶嵌的方式将样品固定在镶料中，最后经过机械磨抛和振动抛光以获得无划痕的截面。然而在磨抛过程中，切削力将导致镶料与待观察样品分离出现缝隙，这一缝隙的存在会导致样品边缘过度磨削——即出现圆弧，最终导致较薄的氧化膜无法很好的被观察到。 通过电镀">
+<meta property="og:title" content="测试技巧 | 插值外推及拉伸数据的刚度修正">
+<meta property="og:url" content="https://134nm.github.io/2023/05/S01-Origin-Interpolation/index.html">
+<meta property="og:site_name" content="134nm | Blog for Nuclear Material">
+<meta property="og:description" content="修正测试数据时，免不了要进行曲线相加或相减的操作。 以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“样品伸长”和“加载系统间隙”两个部分，对于尺寸较小的样品而言，“加载系统间隙”往往是不可忽略的，因此需要借助“拉伸机刚度曲线”来对测试结果进行修正。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/1685608654361.png">
-<meta property="og:image" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/1685608673119.png">
-<meta property="og:image" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/1685608692080.png">
-<meta property="og:image" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/1685608741346.png">
-<meta property="og:image" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/1685608909482.png">
-<meta property="article:published_time" content="2023-06-01T08:34:44.000Z">
-<meta property="article:modified_time" content="2023-06-01T08:48:24.139Z">
+<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505760105.png">
+<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505851848.png">
+<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505907202.png">
+<meta property="og:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505978258.png">
+<meta property="article:published_time" content="2023-05-31T03:54:05.000Z">
+<meta property="article:modified_time" content="2023-06-02T11:56:56.340Z">
 <meta property="article:author" content="摸鱼的酥师傅">
-<meta property="article:tag" content="电镀">
-<meta property="article:tag" content="微观分析">
+<meta property="article:tag" content="数据处理">
+<meta property="article:tag" content="OriginLab">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://134nm.github.io/2023/06/01/S02-Ni-platting/1685608654361.png">
+<meta name="twitter:image" content="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/1685505760105.png">
 
 
-<link rel="canonical" href="https://134nm.github.io/2023/06/01/S02-Ni-platting/">
+<link rel="canonical" href="https://134nm.github.io/2023/05/S01-Origin-Interpolation/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://134nm.github.io/2023/06/01/S02-Ni-platting/","path":"2023/06/01/S02-Ni-platting/","title":"测试技巧 | 金属氧化膜的镀镍保护"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://134nm.github.io/2023/05/S01-Origin-Interpolation/","path":"2023/05/S01-Origin-Interpolation/","title":"测试技巧 | 插值外推及拉伸数据的刚度修正"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>测试技巧 | 金属氧化膜的镀镍保护 | 134nm | A Blog for Nuclear Material</title>
+<title>测试技巧 | 插值外推及拉伸数据的刚度修正 | 134nm | Blog for Nuclear Material</title>
   
 
 
@@ -60,9 +59,9 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="alternate" href="/atom.xml" title="134nm | Blog for Nuclear Material" type="application/atom+xml">
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="alternate" href="/atom.xml" title="134nm | A Blog for Nuclear Material" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -83,7 +82,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">134nm | A Blog for Nuclear Material</p>
+      <p class="site-title">134nm | Blog for Nuclear Material</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">摸鱼ing</p>
@@ -150,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Step1%EF%BC%9A%E6%A0%B7%E5%93%81%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">Step1：样品准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step2%EF%BC%9A%E7%A2%B3%E8%A6%86%E8%86%9C%EF%BC%88%E5%AF%BC%E7%94%B5%E8%89%AF%E5%A5%BD%E7%9A%84%E6%A0%B7%E5%93%81%E5%8F%AF%E8%B7%B3%E8%BF%87%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">Step2：碳覆膜（导电良好的样品可跳过）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step3%EF%BC%9A%E7%94%B5%E9%95%80%E8%86%9C"><span class="nav-number">3.</span> <span class="nav-text">Step3：电镀膜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Step4%EF%BC%9A%E9%95%B6%E6%A0%B7"><span class="nav-number">4.</span> <span class="nav-text">Step4：镶样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">效果展示：</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E5%BA%A6%E6%9B%B2%E7%BA%BF%E6%B5%8B%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">刚度曲线测量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">处理数据的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">实际效果</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -221,7 +220,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://134nm.github.io/2023/06/01/S02-Ni-platting/">
+    <link itemprop="mainEntityOfPage" href="https://134nm.github.io/2023/05/S01-Origin-Interpolation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/001.gif">
@@ -229,17 +228,17 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="134nm | A Blog for Nuclear Material">
+      <meta itemprop="name" content="134nm | Blog for Nuclear Material">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="测试技巧 | 金属氧化膜的镀镍保护 | 134nm | A Blog for Nuclear Material">
+      <meta itemprop="name" content="测试技巧 | 插值外推及拉伸数据的刚度修正 | 134nm | Blog for Nuclear Material">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          测试技巧 | 金属氧化膜的镀镍保护
+          测试技巧 | 插值外推及拉伸数据的刚度修正
         </h1>
 
         <div class="post-meta-container">
@@ -249,9 +248,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-01 16:34:44 / 修改时间：16:48:24" itemprop="dateCreated datePublished" datetime="2023-06-01T16:34:44+08:00">2023-06-01</time>
+      <time title="创建时间：2023-05-31 11:54" itemprop="dateCreated datePublished" datetime="2023-05-31T11:54:05+08:00">2023-05-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-02 19:56" itemprop="dateModified" datetime="2023-06-02T19:56:56+08:00">2023-06-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -270,7 +275,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>671</span>
+      <span>618</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -288,45 +293,30 @@
     
     
     <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><hr>
-<blockquote>
-<p>氧化膜观察是材料均匀腐蚀分析过程中的重要一环，通常使用截面样品观察的方式进行氧化膜分析，这一过程需要首先使用线切割、慢速切割等方式切出截面，之后通过冷镶嵌或热镶嵌的方式将样品固定在镶料中，最后经过机械磨抛和振动抛光以获得无划痕的截面。然而在磨抛过程中，切削力将导致镶料与待观察样品分离出现缝隙，这一缝隙的存在会导致样品边缘过度磨削——即出现圆弧，最终导致较薄的氧化膜无法很好的被观察到。</p>
-<p>通过电镀方式将镀膜与待测表面紧密结合（原子级别），其结合力更强，磨削过程中不易发生分离，能够最大限度地保证较薄的氧化膜经过磨削后仍能保持同一平面，最终提升SEM的拍摄效果和能谱分析的精度。</p>
+<p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
+<p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
 <span id="more"></span>
 
-<p><strong>任务目标：</strong></p>
-<ul>
-<li>在均匀腐蚀样品表面镀膜2层，第一层为碳覆膜，第二层为电镀镍膜。</li>
-<li>镀膜后进行截面形貌观察，保证氧化膜完整性以及良好的观察效果。</li>
-</ul>
+<blockquote>
+<p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
 </blockquote>
-<hr>
-<h2 id="Step1：样品准备"><a href="#Step1：样品准备" class="headerlink" title="Step1：样品准备"></a>Step1：样品准备</h2><p>使用慢速切割机切片，样品沿刀片径向，氧化物面垂直于走刀方向。</p>
-<p>样品表面使用酒精超声清洗，去除表面污渍，并烘干，防止镀膜后膜破损。</p>
-<h2 id="Step2：碳覆膜（导电良好的样品可跳过）"><a href="#Step2：碳覆膜（导电良好的样品可跳过）" class="headerlink" title="Step2：碳覆膜（导电良好的样品可跳过）"></a>Step2：碳覆膜（导电良好的样品可跳过）</h2><p>首先制备原始状态材料，测试覆膜的强度、镶嵌磨抛后的脱落情况等。在确认蒸碳工艺及电镀覆膜工艺无误后再进行下一步操作。</p>
-<p>选用原始样品统一镀膜，蒸碳15s即可，20<em>10</em>1样品，预计一次4片。</p>
-<h2 id="Step3：电镀膜"><a href="#Step3：电镀膜" class="headerlink" title="Step3：电镀膜"></a>Step3：电镀膜</h2><ul>
-<li><strong>装置：</strong> 使用100ml玻璃杯，溶液配制约100mL；</li>
-<li><strong>溶液：</strong> 硫酸镍作主盐（250g/L）+氯化镍活化阳极（40g/L）+硼酸缓冲剂（20g/L）十二烷基硫酸钠润湿剂（0.1g/L）；</li>
-<li><strong>环境：</strong> 温度50℃，pH≈4；</li>
-<li><strong>电源：</strong> 1.4 V，1<del>4 A/dm ^2^ ，即0.01</del>0.04 mA/cm ^2^ ；</li>
-<li><strong>电极：</strong> 阳极为镍片，阴极为待镀样品；</li>
+<blockquote>
+<p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
+</blockquote>
+<h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
+<p>注意夹具的种类不要更换，否则测量的误差更大（其实这个方法本身的误差也很大，仅具有有限的参考作用，切勿当作高精度测量的方法使用）。</p>
+<p>对数据点的处理应当是：测量位移 减去 相同载荷测得的刚度曲线位移。</p>
+<p>因此我们需要对刚度曲线进行差值，在相同载荷处差值。</p>
+<h2 id="处理数据的操作"><a href="#处理数据的操作" class="headerlink" title="处理数据的操作"></a>处理数据的操作</h2><ul>
+<li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
+<li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
+<li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
+<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。</li>
 </ul>
-<p>镀镍厚度估算：0.196<em>I</em>t，即1A，10分钟约1.96um。计划使用15min即（1+8）um厚度镍层。</p>
-<h2 id="Step4：镶样"><a href="#Step4：镶样" class="headerlink" title="Step4：镶样"></a><strong>Step4：镶样</strong></h2><p>切片后使用热镶，一组2~4片。</p>
-<p>磨抛时镀膜面垂直磨抛方向，400#砂纸磨抛时间尽可能短，不得大于50s。800#及1200#砂纸长时间磨抛划痕，最终1um抛光。</p>
-<h2 id="效果展示："><a href="#效果展示：" class="headerlink" title="效果展示："></a>效果展示：</h2><table>
-<thead>
-<tr>
-<th align="center"><img src="/2023/06/01/S02-Ni-platting/1685608654361.png" alt="1685608654361" title="未镀膜区域"></th>
-<th><img src="/2023/06/01/S02-Ni-platting/1685608673119.png" alt="1685608673119" title="镀膜较薄存在分离"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><img src="/2023/06/01/S02-Ni-platting/1685608692080.png" alt="1685608692080" title="镀膜成功区域"></td>
-<td><img src="/2023/06/01/S02-Ni-platting/1685608741346.png" alt="1685608741346" title="镀膜成功区域"></td>
-</tr>
-</tbody></table>
-<p><img src="/2023/06/01/S02-Ni-platting/1685608909482.png" alt="1685608909482" title="SEM-EDS元素分布"></p>
+<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505760105.png" alt="1685505760105" title="差值-外推操作"><em>插值-外推</em></p>
+<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505851848.png" alt="1685505851848"><em>设定参数</em></p>
+<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="/2023/05/31/S01-Origin-Interpolation/1685505907202.png" alt="1685505907202"><em>对实验数据结果进行处理</em></p>
+<p><img src="/2023/05/31/S01-Origin-Interpolation/1685505978258.png" alt="1685505978258"><em>修正前后的曲线</em></p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
     </div>
 
@@ -344,7 +334,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://134nm.github.io/2023/06/01/S02-Ni-platting/" title="测试技巧 | 金属氧化膜的镀镍保护">https://134nm.github.io/2023/06/01/S02-Ni-platting/</a>
+      <a href="https://134nm.github.io/2023/05/S01-Origin-Interpolation/" title="测试技巧 | 插值外推及拉伸数据的刚度修正">https://134nm.github.io/2023/05/S01-Origin-Interpolation/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC</a> 许可协议。转载请注明出处！
@@ -353,21 +343,21 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E7%94%B5%E9%95%80/" rel="tag"># 电镀</a>
-              <a href="/tags/%E5%BE%AE%E8%A7%82%E5%88%86%E6%9E%90/" rel="tag"># 微观分析</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" rel="tag"># 数据处理</a>
+              <a href="/tags/OriginLab/" rel="tag"># OriginLab</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/06/01/D01-myPhD/" rel="prev" title="酥师傅的毕业寄">
-                  <i class="fa fa-chevron-left"></i> 酥师傅的毕业寄
+                <a href="/2023/05/B01-2PLC4R/" rel="prev" title="说明书 | 双PLC四轴软件的使用说明">
+                  <i class="fa fa-chevron-left"></i> 说明书 | 双PLC四轴软件的使用说明
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/06/03/P01-csharplibs/" rel="next" title="编程 | C#中好用的工具、第三方类库和一些操作心得">
-                  编程 | C#中好用的工具、第三方类库和一些操作心得 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/06/D01-myPhD/" rel="next" title="酥师傅的毕业寄">
+                  酥师傅的毕业寄 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -452,7 +442,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://134nm.github.io/2023/06/01/S02-Ni-platting/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://134nm.github.io/2023/05/S01-Origin-Interpolation/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 

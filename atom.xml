@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>134nm | A Blog for Nuclear Material</title>
+  <title>134nm | Blog for Nuclear Material</title>
   
   <subtitle>摸鱼ing</subtitle>
   <link href="https://134nm.github.io/atom.xml" rel="self"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>编程 | C#中好用的工具、第三方类库和一些操作心得</title>
-    <link href="https://134nm.github.io/2023/06/03/P01-csharplibs/"/>
-    <id>https://134nm.github.io/2023/06/03/P01-csharplibs/</id>
+    <link href="https://134nm.github.io/2023/06/P01-csharplibs/"/>
+    <id>https://134nm.github.io/2023/06/P01-csharplibs/</id>
     <published>2023-06-03T08:55:52.000Z</published>
     <updated>2023-06-03T09:42:07.800Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>测试技巧 | 金属氧化膜的镀镍保护</title>
-    <link href="https://134nm.github.io/2023/06/01/S02-Ni-platting/"/>
-    <id>https://134nm.github.io/2023/06/01/S02-Ni-platting/</id>
+    <link href="https://134nm.github.io/2023/06/S02-Ni-platting/"/>
+    <id>https://134nm.github.io/2023/06/S02-Ni-platting/</id>
     <published>2023-06-01T08:34:44.000Z</published>
     <updated>2023-06-01T08:48:24.139Z</updated>
     
@@ -72,8 +72,8 @@
   
   <entry>
     <title>酥师傅的毕业寄</title>
-    <link href="https://134nm.github.io/2023/06/01/D01-myPhD/"/>
-    <id>https://134nm.github.io/2023/06/01/D01-myPhD/</id>
+    <link href="https://134nm.github.io/2023/06/D01-myPhD/"/>
+    <id>https://134nm.github.io/2023/06/D01-myPhD/</id>
     <published>2023-06-01T08:23:55.000Z</published>
     <updated>2023-06-02T11:53:46.139Z</updated>
     
@@ -95,8 +95,8 @@
   
   <entry>
     <title>测试技巧 | 插值外推及拉伸数据的刚度修正</title>
-    <link href="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/"/>
-    <id>https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/</id>
+    <link href="https://134nm.github.io/2023/05/S01-Origin-Interpolation/"/>
+    <id>https://134nm.github.io/2023/05/S01-Origin-Interpolation/</id>
     <published>2023-05-31T03:54:05.000Z</published>
     <updated>2023-06-02T11:56:56.340Z</updated>
     
@@ -120,8 +120,8 @@
   
   <entry>
     <title>说明书 | 双PLC四轴软件的使用说明</title>
-    <link href="https://134nm.github.io/2023/05/31/B01-2PLC4R/"/>
-    <id>https://134nm.github.io/2023/05/31/B01-2PLC4R/</id>
+    <link href="https://134nm.github.io/2023/05/B01-2PLC4R/"/>
+    <id>https://134nm.github.io/2023/05/B01-2PLC4R/</id>
     <published>2023-05-31T01:47:05.000Z</published>
     <updated>2023-06-03T09:23:43.084Z</updated>
     
@@ -143,8 +143,8 @@
   
   <entry>
     <title>核电厂中的材料腐蚀行为</title>
-    <link href="https://134nm.github.io/2023/05/29/M01-corrosion-in-npp/"/>
-    <id>https://134nm.github.io/2023/05/29/M01-corrosion-in-npp/</id>
+    <link href="https://134nm.github.io/2023/05/M01-corrosion-in-npp/"/>
+    <id>https://134nm.github.io/2023/05/M01-corrosion-in-npp/</id>
     <published>2023-05-29T10:12:16.000Z</published>
     <updated>2023-06-02T09:30:55.764Z</updated>
     
