@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>酥师傅的摸鱼日常</title>
+  <title>134nm | A Blog for Nuclear Material</title>
   
   <subtitle>摸鱼ing</subtitle>
-  <link href="https://c00k1s.github.io/atom.xml" rel="self"/>
+  <link href="https://134nm.github.io/atom.xml" rel="self"/>
   
-  <link href="https://c00k1s.github.io/"/>
+  <link href="https://134nm.github.io/"/>
   <updated>2023-06-03T09:42:07.800Z</updated>
-  <id>https://c00k1s.github.io/</id>
+  <id>https://134nm.github.io/</id>
   
   <author>
-    <name>可爱羊师傅的酥饼</name>
+    <name>摸鱼的酥师傅</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>编程 | C#中好用的工具、第三方类库和一些操作心得</title>
-    <link href="https://c00k1s.github.io/2023/06/03/P01-csharplibs/"/>
-    <id>https://c00k1s.github.io/2023/06/03/P01-csharplibs/</id>
+    <link href="https://134nm.github.io/2023/06/03/P01-csharplibs/"/>
+    <id>https://134nm.github.io/2023/06/03/P01-csharplibs/</id>
     <published>2023-06-03T08:55:52.000Z</published>
     <updated>2023-06-03T09:42:07.800Z</updated>
     
@@ -33,21 +33,21 @@
     
     
     
-    <category term="设计与制造" scheme="https://c00k1s.github.io/categories/%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%B6%E9%80%A0/"/>
+    <category term="设计与制造" scheme="https://134nm.github.io/categories/%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%B6%E9%80%A0/"/>
     
     
-    <category term="C#" scheme="https://c00k1s.github.io/tags/C/"/>
+    <category term="C#" scheme="https://134nm.github.io/tags/C/"/>
     
-    <category term="NuGet" scheme="https://c00k1s.github.io/tags/NuGet/"/>
+    <category term="NuGet" scheme="https://134nm.github.io/tags/NuGet/"/>
     
-    <category term="Visual Studio" scheme="https://c00k1s.github.io/tags/Visual-Studio/"/>
+    <category term="Visual Studio" scheme="https://134nm.github.io/tags/Visual-Studio/"/>
     
   </entry>
   
   <entry>
     <title>测试技巧 | 金属氧化膜的镀镍保护</title>
-    <link href="https://c00k1s.github.io/2023/06/01/S02-Ni-platting/"/>
-    <id>https://c00k1s.github.io/2023/06/01/S02-Ni-platting/</id>
+    <link href="https://134nm.github.io/2023/06/01/S02-Ni-platting/"/>
+    <id>https://134nm.github.io/2023/06/01/S02-Ni-platting/</id>
     <published>2023-06-01T08:34:44.000Z</published>
     <updated>2023-06-01T08:48:24.139Z</updated>
     
@@ -61,19 +61,19 @@
     
     
     
-    <category term="材料分析" scheme="https://c00k1s.github.io/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/"/>
+    <category term="材料分析" scheme="https://134nm.github.io/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/"/>
     
     
-    <category term="电镀" scheme="https://c00k1s.github.io/tags/%E7%94%B5%E9%95%80/"/>
+    <category term="电镀" scheme="https://134nm.github.io/tags/%E7%94%B5%E9%95%80/"/>
     
-    <category term="微观分析" scheme="https://c00k1s.github.io/tags/%E5%BE%AE%E8%A7%82%E5%88%86%E6%9E%90/"/>
+    <category term="微观分析" scheme="https://134nm.github.io/tags/%E5%BE%AE%E8%A7%82%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>酥师傅的毕业寄</title>
-    <link href="https://c00k1s.github.io/2023/06/01/D01-myPhD/"/>
-    <id>https://c00k1s.github.io/2023/06/01/D01-myPhD/</id>
+    <link href="https://134nm.github.io/2023/06/01/D01-myPhD/"/>
+    <id>https://134nm.github.io/2023/06/01/D01-myPhD/</id>
     <published>2023-06-01T08:23:55.000Z</published>
     <updated>2023-06-02T11:53:46.139Z</updated>
     
@@ -88,15 +88,15 @@
     
     
     
-    <category term="酥饼周报" scheme="https://c00k1s.github.io/categories/%E9%85%A5%E9%A5%BC%E5%91%A8%E6%8A%A5/"/>
+    <category term="酥饼周报" scheme="https://134nm.github.io/categories/%E9%85%A5%E9%A5%BC%E5%91%A8%E6%8A%A5/"/>
     
     
   </entry>
   
   <entry>
     <title>测试技巧 | 插值外推及拉伸数据的刚度修正</title>
-    <link href="https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/"/>
-    <id>https://c00k1s.github.io/2023/05/31/S01-Origin-Interpolation/</id>
+    <link href="https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/"/>
+    <id>https://134nm.github.io/2023/05/31/S01-Origin-Interpolation/</id>
     <published>2023-05-31T03:54:05.000Z</published>
     <updated>2023-06-02T11:56:56.340Z</updated>
     
@@ -109,19 +109,19 @@
     
     
     
-    <category term="材料分析" scheme="https://c00k1s.github.io/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/"/>
+    <category term="材料分析" scheme="https://134nm.github.io/categories/%E6%9D%90%E6%96%99%E5%88%86%E6%9E%90/"/>
     
     
-    <category term="数据处理" scheme="https://c00k1s.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    <category term="数据处理" scheme="https://134nm.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
     
-    <category term="OriginLab" scheme="https://c00k1s.github.io/tags/OriginLab/"/>
+    <category term="OriginLab" scheme="https://134nm.github.io/tags/OriginLab/"/>
     
   </entry>
   
   <entry>
     <title>说明书 | 双PLC四轴软件的使用说明</title>
-    <link href="https://c00k1s.github.io/2023/05/31/B01-2PLC4R/"/>
-    <id>https://c00k1s.github.io/2023/05/31/B01-2PLC4R/</id>
+    <link href="https://134nm.github.io/2023/05/31/B01-2PLC4R/"/>
+    <id>https://134nm.github.io/2023/05/31/B01-2PLC4R/</id>
     <published>2023-05-31T01:47:05.000Z</published>
     <updated>2023-06-03T09:23:43.084Z</updated>
     
@@ -132,19 +132,19 @@
     
     
     
-    <category term="说明书" scheme="https://c00k1s.github.io/categories/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <category term="说明书" scheme="https://134nm.github.io/categories/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
     
     
-    <category term="说明书" scheme="https://c00k1s.github.io/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
+    <category term="说明书" scheme="https://134nm.github.io/tags/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
     
-    <category term="PLC" scheme="https://c00k1s.github.io/tags/PLC/"/>
+    <category term="PLC" scheme="https://134nm.github.io/tags/PLC/"/>
     
   </entry>
   
   <entry>
     <title>核电厂中的材料腐蚀行为</title>
-    <link href="https://c00k1s.github.io/2023/05/29/M01-corrosion-in-npp/"/>
-    <id>https://c00k1s.github.io/2023/05/29/M01-corrosion-in-npp/</id>
+    <link href="https://134nm.github.io/2023/05/29/M01-corrosion-in-npp/"/>
+    <id>https://134nm.github.io/2023/05/29/M01-corrosion-in-npp/</id>
     <published>2023-05-29T10:12:16.000Z</published>
     <updated>2023-06-02T09:30:55.764Z</updated>
     
@@ -156,14 +156,14 @@
     
     
     
-    <category term="材料失效" scheme="https://c00k1s.github.io/categories/%E6%9D%90%E6%96%99%E5%A4%B1%E6%95%88/"/>
+    <category term="材料失效" scheme="https://134nm.github.io/categories/%E6%9D%90%E6%96%99%E5%A4%B1%E6%95%88/"/>
     
     
-    <category term="核电厂" scheme="https://c00k1s.github.io/tags/%E6%A0%B8%E7%94%B5%E5%8E%82/"/>
+    <category term="核电厂" scheme="https://134nm.github.io/tags/%E6%A0%B8%E7%94%B5%E5%8E%82/"/>
     
-    <category term="金属材料" scheme="https://c00k1s.github.io/tags/%E9%87%91%E5%B1%9E%E6%9D%90%E6%96%99/"/>
+    <category term="金属材料" scheme="https://134nm.github.io/tags/%E9%87%91%E5%B1%9E%E6%9D%90%E6%96%99/"/>
     
-    <category term="腐蚀" scheme="https://c00k1s.github.io/tags/%E8%85%90%E8%9A%80/"/>
+    <category term="腐蚀" scheme="https://134nm.github.io/tags/%E8%85%90%E8%9A%80/"/>
     
   </entry>
   
