@@ -269,7 +269,7 @@
 <p>选用原始样品统一镀膜，蒸碳15s即可，20<em>10</em>1样品，预计一次4片。</p>
 <h2 id="Step3：电镀膜"><a href="#Step3：电镀膜" class="headerlink" title="Step3：电镀膜"></a>Step3：电镀膜</h2><ul>
 <li><strong>装置：</strong> 使用100ml玻璃杯，溶液配制约100mL；</li>
-<li><strong>溶液：</strong> 硫酸镍作主盐（250g/L）+氯化镍活化阳极（40g/L）+硼酸缓冲剂（20g/L）十二烷基硫酸钠润湿剂（0.1g/L）；</li>
+<li><strong>溶液：</strong> 硫酸镍作主盐（250g/L，$\ce{NiSO4·6H2O}$）+氯化镍活化阳极（40g/L）+硼酸缓冲剂（20g/L，$\ce{NiCl2·6H2O}$）十二烷基硫酸钠润湿剂（0.1g/L）；</li>
 <li><strong>环境：</strong> 温度50℃，pH≈4；</li>
 <li><strong>电源：</strong> 1.4 V，1<del>4 A/dm ^2^ ，即0.01</del>0.04 mA/cm ^2^ ；</li>
 <li><strong>电极：</strong> 阳极为镍片，阴极为待镀样品；</li>
@@ -290,6 +290,20 @@
 </tr>
 </tbody></table>
 <p><img src="/2023/06/S02-Ni-platting/1685608909482.png" alt="1685608909482" title="SEM-EDS元素分布"></p>
+<h2 id="后记（2023年12月）"><a href="#后记（2023年12月）" class="headerlink" title="后记（2023年12月）"></a>后记（2023年12月）</h2><p>在实际操作的过程中，发现了很多可能影响效果的问题，接下来列举如下：</p>
+<ul>
+<li><p>本人使用的镍盐为颗粒状的水合晶体，配置后效果如下，从颜色上是较为深绿的，但溶液整体仍保持一定的透明度。<br><img src="/2023/06/S02-Ni-platting/Watts%20Ni.png" alt="Watts镀镍溶液示例 2021年" title="Watts镀镍溶液示例 2021年"></p>
+</li>
+<li><p>镀镍层分离问题：一般由于溶液温度偏低、电流过高导致镍膜的结合力下降，取出后容易脱落。在正式镀镍之前，请务必反复用备用样品进行测试，避免对珍贵样品的损伤。</p>
+</li>
+<li><p>题外话：</p>
+<ul>
+<li>氧化膜抗腐蚀性能与导电性能的关系，一般而言在水中腐蚀形成的氧化膜都与金属的电化学行为有着些许联系，其实可以推断，当氧化膜保护性较好的时候，也就意味着其对电化学行为的抑制作用较强，可以认为是导电性较差的。</li>
+<li>那么在镀镍的过程中，这种氧化膜的镀镍的难度也就更大，需要表面预先进行充分的喷金来实现导电性能的提升。</li>
+<li>当然镀镍前也不应该过度喷金，过长时间的喷金也可能导致氧化膜受损伤，一般15-30s即可。当然因设备和样品而异。</li>
+</ul>
+</li>
+</ul>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>材料分析</category>
