@@ -109,6 +109,8 @@
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
         <category>酥饼日寄</category>
+        <category>技巧</category>
+        <category>文档处理</category>
       </categories>
       <tags>
         <tag>毕业</tag>
@@ -199,7 +201,8 @@
 
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Staehle R W. Quantitative Micro Nano(QMN) Approach to SCC Mechanism and Prediction Starting a Third Meeting[R]. John Wiley and Sons, Inc., 2014: 1535-1625.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">汪家梅, 陆辉, 段振刚, 等. 模拟压水堆二回路水环境中温度对690合金电化学腐蚀行为的影响[J]. 中国腐蚀与防护学报, 2016(02): 113-120.<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">汪家梅, 段振刚, 张乐福, 等. 核电蒸汽发生器690合金管在高温高压水中的腐蚀电化学行为[J]. 上海交通大学学报, 2016(04): 514-520.<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">尹成龙, 张乐福, 徐雪莲, 等. P11钢在湿蒸汽中流动加速腐蚀性能的模拟与试验研究[C]. 中国核能行业协会, 上海, 2011.<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">苏豪展, 陈凯, 张乐福, 等. 316LN不锈钢在高温高压水环境下的腐蚀疲劳行为研究[J]. 核动力工程, 2020,41(1): 37-42.<a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">杜东海, 余论, 陈凯, et al. 直流电压降法应力腐蚀裂纹扩展速率在线测定试验系统[J]. 理化检验(物理分册), 2014, 50(1):25-30.<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Kai Chen, Jiamei Wang, et al. dK/da effects on the SCC growth rates of nickel base alloys in high-temperature water[J]. Journal of Nuclear Materials, 2018, 508, 13-21.<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Lai P, Gao X, Guo X, et al. Effect of temperature on fretting wear behavior and mechanism of alloy 690 in water[J]. Nuclear Engineering and Design, 2018, 327:51-60.<a href="#fnref:8" rev="footnote"> ↩</a></span></li></ol></div></div><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>材料失效</category>
+        <category>科普</category>
+        <category>材料</category>
       </categories>
       <tags>
         <tag>核电厂</tag>
@@ -317,7 +320,8 @@
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.nsf.gov/od/lpa/nsf50/vbush1945.htm">Science The Endless Frontier(1945)</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://nap.nationalacademies.org/catalog/25990/the-endless-frontier-the-next-75-years-in-science">The Endless Frontier
 The Next 75 Years in Science(2020)</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>读书笔记</category>
+        <category>酥饼日寄</category>
+        <category>读书</category>
       </categories>
       <tags>
         <tag>美国</tag>
@@ -348,7 +352,8 @@ The Next 75 Years in Science(2020)</a><a href="#fnref:2" rev="footnote"> ↩</a>
 </blockquote>
 <h1 id="用户自定义窗口与控件"><a href="#用户自定义窗口与控件" class="headerlink" title="用户自定义窗口与控件"></a>用户自定义窗口与控件</h1><h2 id="IP输入框"><a href="#IP输入框" class="headerlink" title="IP输入框"></a>IP输入框</h2><h1 id="施耐德PLC通讯协议"><a href="#施耐德PLC通讯协议" class="headerlink" title="施耐德PLC通讯协议"></a>施耐德PLC通讯协议</h1><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>设计与制造</category>
+        <category>技巧</category>
+        <category>编程</category>
       </categories>
       <tags>
         <tag>C#</tag>
@@ -416,7 +421,8 @@ The Next 75 Years in Science(2020)</a><a href="#fnref:2" rev="footnote"> ↩</a>
 </ul>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>材料分析</category>
+        <category>技巧</category>
+        <category>测试分析</category>
       </categories>
       <tags>
         <tag>电镀</tag>
@@ -484,7 +490,8 @@ The Next 75 Years in Science(2020)</a><a href="#fnref:2" rev="footnote"> ↩</a>
 </ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">GB/T 29088-2012 金属和合金的腐蚀 双环电化学动电位再活化测量方法[S].<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://doi.org/10.5006/2775">CHEN K, WANG J, DU D, et al. Stress Corrosion Crack Growth Behavior of Type 310S Stainless Steel in Supercritical Water[J]. CORROSION, 2018,74(7): 776-787.</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://doi.org/10.1016/j.actamat.2006.11.021">PARDO A, MERINO M C, COY A E, et al. Influence of Ti, C and N concentration on the intergranular corrosion behaviour of AISI 316Ti and 321 stainless steels[J]. Acta Materialia, 2007,55(7): 2239-2251.</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li></ol></div></div><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>材料分析</category>
+        <category>技巧</category>
+        <category>分析测试</category>
       </categories>
       <tags>
         <tag>金属材料</tag>
@@ -530,7 +537,8 @@ The Next 75 Years in Science(2020)</a><a href="#fnref:2" rev="footnote"> ↩</a>
 
 </center><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
       <categories>
-        <category>材料分析</category>
+        <category>技巧</category>
+        <category>工具软件</category>
       </categories>
       <tags>
         <tag>数据处理</tag>
