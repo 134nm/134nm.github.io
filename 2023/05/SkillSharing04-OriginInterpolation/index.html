@@ -170,18 +170,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -299,11 +299,8 @@
 <p>修正测试数据时，免不了要进行曲线相加或相减的操作。</p>
 <p>以拉伸曲线为例，使用电机编码器作为位移的情况下，测得的拉伸数据实际上包含了“<strong>样品伸长</strong>”和“<strong>加载系统间隙</strong>”两个部分，对于尺寸较小的样品而言，“<strong>加载系统间隙</strong>”往往是不可忽略的，因此需要借助“<strong>拉伸机刚度曲线</strong>”来对测试结果进行修正。</p>
 <span id="more"></span>
-
 <blockquote>
 <p>应当注意：除了刚度曲线修正之外，对测试后的样品实际长度的测量是十分必要的工作。实际测量的变形量实际对应着材料的非弹性变形量，这一数据往往具有更高的准确性，但完全断裂的样品除外。</p>
-</blockquote>
-<blockquote>
 <p>ps：不要问为什么没有引伸计，高温高压容器内的引伸计安装成本较高，一部分测试的关注点并非材料变形量时，或者仅对比相对变形量时可以使用不具有引伸计的拉伸系统。</p>
 </blockquote>
 <h2 id="刚度曲线测量"><a href="#刚度曲线测量" class="headerlink" title="刚度曲线测量"></a>刚度曲线测量</h2><p>刚度曲线的测量是使用一个标距段更粗、更短的样品来代替待测样品，并在对应测试环境下进行拉伸，在需求的在和范围内得到一条“载荷-位移”曲线。</p>
@@ -314,14 +311,13 @@
 <li>插值、外推：位于菜单中的“<strong>分析-数学-插值</strong>”选项中，打开对话框；</li>
 <li>输入选择时确认变量的范围，选择适当的XY变量：载荷作为X，位移作为Y；</li>
 <li>设置输出范围，可将测试数据中的载荷作为目标输出范围。这样输出的数据中载荷同样对应。</li>
-<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。<center></center></li>
+<li>最后将“<strong>实测曲线</strong>”中减去“<strong>刚度曲线</strong>”，并去掉零点偏移量，最终得到修正后的曲线。<center>
+
+</center></li>
 </ul>
 <img src="/2023/05/SkillSharing04-OriginInterpolation/1685505760105.png" class="" title="差值-外推操作">
-
 <img src="/2023/05/SkillSharing04-OriginInterpolation/1685505851848.png" class="" title="设定参数">
-
-
-
+<p>&lt;/center&gt;</p>
 <h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><center>
 
 <img src="/2023/05/SkillSharing04-OriginInterpolation/1685505907202.png" class="" title="对实验数据结果进行处理">
@@ -402,14 +398,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">13k</span>
+    <span title="站点总字数">14k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">46 分钟</span>
+    <span title="站点阅读时长">50 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
